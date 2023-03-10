@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DboTicariOtomasyonModelStoreContainer" CdmEntityContainer="DboTicariOtomasyonEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_BANKALAR">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_BANKALAR">
+        <MappingFragment StoreEntitySet="TBL_BANKALAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BANKAADI" ColumnName="BANKAADI" />
+          <ScalarProperty Name="IL" ColumnName="IL" />
+          <ScalarProperty Name="ILCE" ColumnName="ILCE" />
+          <ScalarProperty Name="SUBE" ColumnName="SUBE" />
+          <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+          <ScalarProperty Name="HESAPNO" ColumnName="HESAPNO" />
+          <ScalarProperty Name="YETKILI" ColumnName="YETKILI" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="HESAPTURU" ColumnName="HESAPTURU" />
+          <ScalarProperty Name="FIRMAID" ColumnName="FIRMAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FATURABILGI">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_FATURABILGI">
+        <MappingFragment StoreEntitySet="TBL_FATURABILGI">
+          <ScalarProperty Name="FATURABILGIID" ColumnName="FATURABILGIID" />
+          <ScalarProperty Name="SERI" ColumnName="SERI" />
+          <ScalarProperty Name="SIRANO" ColumnName="SIRANO" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="SAAT" ColumnName="SAAT" />
+          <ScalarProperty Name="VERGIDAIRE" ColumnName="VERGIDAIRE" />
+          <ScalarProperty Name="ALICI" ColumnName="ALICI" />
+          <ScalarProperty Name="TESLIMEDEN" ColumnName="TESLIMEDEN" />
+          <ScalarProperty Name="TESLIMALAN" ColumnName="TESLIMALAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FATURADETAY">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_FATURADETAY">
+        <MappingFragment StoreEntitySet="TBL_FATURADETAY">
+          <ScalarProperty Name="FATURAURUNID" ColumnName="FATURAURUNID" />
+          <ScalarProperty Name="URUNAD" ColumnName="URUNAD" />
+          <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+          <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+          <ScalarProperty Name="FATURAID" ColumnName="FATURAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FIRMALAR">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_FIRMALAR">
+        <MappingFragment StoreEntitySet="TBL_FIRMALAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="YETKILISTATU" ColumnName="YETKILISTATU" />
+          <ScalarProperty Name="YETKILIADSOYAD" ColumnName="YETKILIADSOYAD" />
+          <ScalarProperty Name="YETKILITC" ColumnName="YETKILITC" />
+          <ScalarProperty Name="SEKTOR" ColumnName="SEKTOR" />
+          <ScalarProperty Name="TELEFON1" ColumnName="TELEFON1" />
+          <ScalarProperty Name="TELEFON2" ColumnName="TELEFON2" />
+          <ScalarProperty Name="TELEFON3" ColumnName="TELEFON3" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="IL" ColumnName="IL" />
+          <ScalarProperty Name="ILCE" ColumnName="ILCE" />
+          <ScalarProperty Name="VERGIDAIRE" ColumnName="VERGIDAIRE" />
+          <ScalarProperty Name="ADRES" ColumnName="ADRES" />
+          <ScalarProperty Name="OZELKOD1" ColumnName="OZELKOD1" />
+          <ScalarProperty Name="OZELKOD2" ColumnName="OZELKOD2" />
+          <ScalarProperty Name="OZELKOD3" ColumnName="OZELKOD3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_ILCELER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_ILCELER">
+        <MappingFragment StoreEntitySet="TBL_ILCELER">
+          <ScalarProperty Name="ilceId" ColumnName="ilceId" />
+          <ScalarProperty Name="SehirId" ColumnName="SehirId" />
+          <ScalarProperty Name="IlceAdi" ColumnName="IlceAdi" />
+          <ScalarProperty Name="SehirAdi" ColumnName="SehirAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SEHIRLER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_SEHIRLER">
+        <MappingFragment StoreEntitySet="TBL_SEHIRLER">
+          <ScalarProperty Name="SehirId" ColumnName="SehirId" />
+          <ScalarProperty Name="SehirAdi" ColumnName="SehirAdi" />
+          <ScalarProperty Name="PlakaNo" ColumnName="PlakaNo" />
+          <ScalarProperty Name="TelefonKodu" ColumnName="TelefonKodu" />
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SEMTMAH">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_SEMTMAH">
+        <MappingFragment StoreEntitySet="TBL_SEMTMAH">
+          <ScalarProperty Name="SemtMahId" ColumnName="SemtMahId" />
+          <ScalarProperty Name="SemtAdi" ColumnName="SemtAdi" />
+          <ScalarProperty Name="MahalleAdi" ColumnName="MahalleAdi" />
+          <ScalarProperty Name="PostaKodu" ColumnName="PostaKodu" />
+          <ScalarProperty Name="ilceId" ColumnName="ilceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_ULKELER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_ULKELER">
+        <MappingFragment StoreEntitySet="TBL_ULKELER">
+          <ScalarProperty Name="UlkeId" ColumnName="UlkeId" />
+          <ScalarProperty Name="IkiliKod" ColumnName="IkiliKod" />
+          <ScalarProperty Name="UcluKod" ColumnName="UcluKod" />
+          <ScalarProperty Name="UlkeAdi" ColumnName="UlkeAdi" />
+          <ScalarProperty Name="TelKodu" ColumnName="TelKodu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_GIDERLER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_GIDERLER">
+        <MappingFragment StoreEntitySet="TBL_GIDERLER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AY" ColumnName="AY" />
+          <ScalarProperty Name="YIL" ColumnName="YIL" />
+          <ScalarProperty Name="ELEKTRIK" ColumnName="ELEKTRIK" />
+          <ScalarProperty Name="SU" ColumnName="SU" />
+          <ScalarProperty Name="DOGALGAZ" ColumnName="DOGALGAZ" />
+          <ScalarProperty Name="INTERNET" ColumnName="INTERNET" />
+          <ScalarProperty Name="MAASLAR" ColumnName="MAASLAR" />
+          <ScalarProperty Name="EXSTRA" ColumnName="EXSTRA" />
+          <ScalarProperty Name="NOTLAR" ColumnName="NOTLAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MUSTERILER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_MUSTERILER">
+        <MappingFragment StoreEntitySet="TBL_MUSTERILER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+          <ScalarProperty Name="TELEFON2" ColumnName="TELEFON2" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="IL" ColumnName="IL" />
+          <ScalarProperty Name="ILCE" ColumnName="ILCE" />
+          <ScalarProperty Name="ADRES" ColumnName="ADRES" />
+          <ScalarProperty Name="VERGIDAIRE" ColumnName="VERGIDAIRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_NOTLAR">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_NOTLAR">
+        <MappingFragment StoreEntitySet="TBL_NOTLAR">
+          <ScalarProperty Name="NOTID" ColumnName="NOTID" />
+          <ScalarProperty Name="NOTTARIH" ColumnName="NOTTARIH" />
+          <ScalarProperty Name="NOTSAAT" ColumnName="NOTSAAT" />
+          <ScalarProperty Name="NOTBASLIK" ColumnName="NOTBASLIK" />
+          <ScalarProperty Name="NOTDETAY" ColumnName="NOTDETAY" />
+          <ScalarProperty Name="NOTOLUSTURAN" ColumnName="NOTOLUSTURAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_PERSONELLER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_PERSONELLER">
+        <MappingFragment StoreEntitySet="TBL_PERSONELLER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="IL" ColumnName="IL" />
+          <ScalarProperty Name="ILCE" ColumnName="ILCE" />
+          <ScalarProperty Name="ADRES" ColumnName="ADRES" />
+          <ScalarProperty Name="GOREV" ColumnName="GOREV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_STOKLAR">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_STOKLAR">
+        <MappingFragment StoreEntitySet="TBL_STOKLAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="STOKTUR" ColumnName="STOKTUR" />
+          <ScalarProperty Name="STOKADET" ColumnName="STOKADET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUNLER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_URUNLER">
+        <MappingFragment StoreEntitySet="TBL_URUNLER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="URUNAD" ColumnName="URUNAD" />
+          <ScalarProperty Name="MARKA" ColumnName="MARKA" />
+          <ScalarProperty Name="MODEL" ColumnName="MODEL" />
+          <ScalarProperty Name="YIL" ColumnName="YIL" />
+          <ScalarProperty Name="ADET" ColumnName="ADET" />
+          <ScalarProperty Name="ALISFIYAT" ColumnName="ALISFIYAT" />
+          <ScalarProperty Name="SATISFIYAT" ColumnName="SATISFIYAT" />
+          <ScalarProperty Name="DETAY" ColumnName="DETAY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="BankaBilgileri" FunctionName="DboTicariOtomasyonModel.Store.BankaBilgileri">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DboTicariOtomasyonModel.BankaBilgileri_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BANKAADI" ColumnName="BANKAADI" />
+          <ScalarProperty Name="IL" ColumnName="IL" />
+          <ScalarProperty Name="ILCE" ColumnName="ILCE" />
+          <ScalarProperty Name="SUBE" ColumnName="SUBE" />
+          <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+          <ScalarProperty Name="HESAPNO" ColumnName="HESAPNO" />
+          <ScalarProperty Name="YETKILI" ColumnName="YETKILI" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="HESAPTURU" ColumnName="HESAPTURU" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
