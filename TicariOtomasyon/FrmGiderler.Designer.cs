@@ -465,6 +465,7 @@ namespace TicariOtomasyon
             // 
             // Txtid
             // 
+            this.Txtid.Enabled = false;
             this.Txtid.Location = new System.Drawing.Point(54, 35);
             this.Txtid.Margin = new System.Windows.Forms.Padding(2);
             this.Txtid.Name = "Txtid";
