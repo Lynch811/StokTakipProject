@@ -155,14 +155,15 @@
   </EntityType>
   <EntityType Name="TBL_NOTLAR">
     <Key>
-      <PropertyRef Name="NOTID" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="NOTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NOTTARIH" Type="DateTime" Precision="0" />
-    <Property Name="NOTSAAT" Type="Time" Precision="7" />
-    <Property Name="NOTBASLIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="NOTDETAY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="NOTOLUSTURAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SAAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BASLIK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DETAY" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="OLUSTURAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HITAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="TBL_PERSONELLER">
     <Key>
@@ -249,7 +250,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DboTicariOtomasyonEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DboTicariOtomasyonEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TBL_BANKALAR" EntityType="Self.TBL_BANKALAR" />
     <EntitySet Name="TBL_FATURABILGI" EntityType="Self.TBL_FATURABILGI" />
@@ -282,6 +283,36 @@
       <End Role="TBL_SEMTMAH" EntitySet="TBL_SEMTMAH" />
     </AssociationSet>
     <FunctionImport Name="BankaBilgileri" ReturnType="Collection(DboTicariOtomasyonModel.BankaBilgileri_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DboTicariOtomasyonModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DboTicariOtomasyonModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
   <ComplexType Name="BankaBilgileri_Result">
     <Property Type="Int16" Name="ID" Nullable="false" />
@@ -296,5 +327,16 @@
     <Property Type="String" Name="TARIH" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="HESAPTURU" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="AD" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
 </Schema>

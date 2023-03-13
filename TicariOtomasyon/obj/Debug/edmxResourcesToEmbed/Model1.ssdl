@@ -130,14 +130,15 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.TBL_MUSTERILER' does not ha
 warning 6002: The table/view 'DboTicariOtomasyon.dbo.TBL_NOTLAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="TBL_NOTLAR">
     <Key>
-      <PropertyRef Name="NOTID" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="NOTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NOTTARIH" Type="smalldatetime" />
-    <Property Name="NOTSAAT" Type="time" Precision="7" />
-    <Property Name="NOTBASLIK" Type="varchar" MaxLength="50" />
-    <Property Name="NOTDETAY" Type="varchar" MaxLength="250" />
-    <Property Name="NOTOLUSTURAN" Type="varchar" MaxLength="50" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TARIH" Type="varchar" MaxLength="50" />
+    <Property Name="SAAT" Type="varchar" MaxLength="50" />
+    <Property Name="BASLIK" Type="varchar" MaxLength="50" />
+    <Property Name="DETAY" Type="varchar" MaxLength="400" />
+    <Property Name="OLUSTURAN" Type="varchar" MaxLength="50" />
+    <Property Name="HITAP" Type="varchar" MaxLength="50" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'DboTicariOtomasyon.dbo.TBL_PERSONELLER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -261,6 +262,37 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.TBL_URUNLER' does not have 
     </ReferentialConstraint>
   </Association>
   <Function Name="BankaBilgileri" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="DboTicariOtomasyonModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBL_BANKALAR" EntityType="Self.TBL_BANKALAR" Schema="dbo" store:Type="Tables" />
@@ -302,12 +334,13 @@ warning 6002: The table/view 'DboTicariOtomasyon.dbo.TBL_URUNLER' does not have 
     </EntitySet>
     <EntitySet Name="TBL_NOTLAR" EntityType="Self.TBL_NOTLAR" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [TBL_NOTLAR].[NOTID] AS [NOTID], 
-    [TBL_NOTLAR].[NOTTARIH] AS [NOTTARIH], 
-    [TBL_NOTLAR].[NOTSAAT] AS [NOTSAAT], 
-    [TBL_NOTLAR].[NOTBASLIK] AS [NOTBASLIK], 
-    [TBL_NOTLAR].[NOTDETAY] AS [NOTDETAY], 
-    [TBL_NOTLAR].[NOTOLUSTURAN] AS [NOTOLUSTURAN]
+    [TBL_NOTLAR].[ID] AS [ID], 
+    [TBL_NOTLAR].[TARIH] AS [TARIH], 
+    [TBL_NOTLAR].[SAAT] AS [SAAT], 
+    [TBL_NOTLAR].[BASLIK] AS [BASLIK], 
+    [TBL_NOTLAR].[DETAY] AS [DETAY], 
+    [TBL_NOTLAR].[OLUSTURAN] AS [OLUSTURAN], 
+    [TBL_NOTLAR].[HITAP] AS [HITAP]
     FROM [dbo].[TBL_NOTLAR] AS [TBL_NOTLAR]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="TBL_PERSONELLER" EntityType="Self.TBL_PERSONELLER" store:Type="Tables" store:Schema="dbo">

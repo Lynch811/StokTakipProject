@@ -37,7 +37,6 @@ namespace TicariOtomasyon
             this.CmbIlce = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.MskTc = new System.Windows.Forms.MaskedTextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.CmbIl = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -47,7 +46,6 @@ namespace TicariOtomasyon
             this.RchAdres = new System.Windows.Forms.RichTextBox();
             this.TxtMail = new DevExpress.XtraEditors.TextEdit();
             this.TxtSoyad = new DevExpress.XtraEditors.TextEdit();
-            this.MskTelefon1 = new System.Windows.Forms.MaskedTextBox();
             this.TxtAd = new DevExpress.XtraEditors.TextEdit();
             this.Txtid = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -56,6 +54,8 @@ namespace TicariOtomasyon
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.MskTelefon1 = new DevExpress.XtraEditors.TextEdit();
+            this.MskTc = new DevExpress.XtraEditors.TextEdit();
             this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.TxtGorev.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbIlce.Properties)).BeginInit();
@@ -68,24 +68,27 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MskTelefon1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MskTc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtGorev
             // 
-            this.TxtGorev.Location = new System.Drawing.Point(90, 372);
-            this.TxtGorev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtGorev.Location = new System.Drawing.Point(82, 348);
+            this.TxtGorev.Margin = new System.Windows.Forms.Padding(2);
             this.TxtGorev.Name = "TxtGorev";
             this.TxtGorev.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtGorev.Properties.Appearance.Options.UseFont = true;
-            this.TxtGorev.Size = new System.Drawing.Size(232, 26);
-            this.TxtGorev.TabIndex = 72;
+            this.TxtGorev.Properties.MaxLength = 50;
+            this.TxtGorev.Size = new System.Drawing.Size(242, 26);
+            this.TxtGorev.TabIndex = 8;
             // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(23, 372);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl11.Location = new System.Drawing.Point(23, 351);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(45, 20);
             this.labelControl11.TabIndex = 71;
@@ -95,8 +98,8 @@ namespace TicariOtomasyon
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(23, 334);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl10.Location = new System.Drawing.Point(23, 313);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(31, 20);
             this.labelControl10.TabIndex = 70;
@@ -106,8 +109,8 @@ namespace TicariOtomasyon
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(23, 293);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl8.Location = new System.Drawing.Point(23, 272);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(15, 20);
             this.labelControl8.TabIndex = 69;
@@ -115,22 +118,22 @@ namespace TicariOtomasyon
             // 
             // CmbIlce
             // 
-            this.CmbIlce.Location = new System.Drawing.Point(58, 334);
-            this.CmbIlce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmbIlce.Location = new System.Drawing.Point(60, 310);
+            this.CmbIlce.Margin = new System.Windows.Forms.Padding(2);
             this.CmbIlce.Name = "CmbIlce";
             this.CmbIlce.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbIlce.Properties.Appearance.Options.UseFont = true;
             this.CmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbIlce.Size = new System.Drawing.Size(264, 26);
-            this.CmbIlce.TabIndex = 68;
+            this.CmbIlce.TabIndex = 7;
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(23, 254);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl7.Location = new System.Drawing.Point(23, 233);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(33, 20);
             this.labelControl7.TabIndex = 67;
@@ -140,30 +143,19 @@ namespace TicariOtomasyon
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(23, 171);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl6.Location = new System.Drawing.Point(23, 150);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(22, 20);
             this.labelControl6.TabIndex = 66;
             this.labelControl6.Text = "TC:";
             // 
-            // MskTc
-            // 
-            this.MskTc.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTc.Location = new System.Drawing.Point(54, 171);
-            this.MskTc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MskTc.Mask = "00000000000";
-            this.MskTc.Name = "MskTc";
-            this.MskTc.Size = new System.Drawing.Size(270, 27);
-            this.MskTc.TabIndex = 65;
-            this.MskTc.ValidatingType = typeof(int);
-            // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(23, 211);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl4.Location = new System.Drawing.Point(23, 190);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(54, 20);
             this.labelControl4.TabIndex = 62;
@@ -171,23 +163,23 @@ namespace TicariOtomasyon
             // 
             // CmbIl
             // 
-            this.CmbIl.Location = new System.Drawing.Point(58, 293);
-            this.CmbIl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmbIl.Location = new System.Drawing.Point(60, 269);
+            this.CmbIl.Margin = new System.Windows.Forms.Padding(2);
             this.CmbIl.Name = "CmbIl";
             this.CmbIl.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbIl.Properties.Appearance.Options.UseFont = true;
             this.CmbIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CmbIl.Size = new System.Drawing.Size(264, 26);
-            this.CmbIl.TabIndex = 61;
+            this.CmbIl.TabIndex = 6;
             this.CmbIl.SelectedIndexChanged += new System.EventHandler(this.CmbIl_SelectedIndexChanged);
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 130);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Location = new System.Drawing.Point(23, 109);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(45, 20);
             this.labelControl2.TabIndex = 60;
@@ -198,11 +190,11 @@ namespace TicariOtomasyon
             this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnGuncelle.Appearance.Options.UseFont = true;
             this.BtnGuncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnGuncelle.ImageOptions.SvgImage")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(54, 553);
-            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGuncelle.Location = new System.Drawing.Point(54, 548);
+            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(118, 36);
-            this.BtnGuncelle.TabIndex = 59;
+            this.BtnGuncelle.TabIndex = 12;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
@@ -211,11 +203,11 @@ namespace TicariOtomasyon
             this.BtnSil.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnSil.Appearance.Options.UseFont = true;
             this.BtnSil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnSil.ImageOptions.SvgImage")));
-            this.BtnSil.Location = new System.Drawing.Point(194, 513);
-            this.BtnSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSil.Location = new System.Drawing.Point(194, 497);
+            this.BtnSil.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(112, 36);
-            this.BtnSil.TabIndex = 58;
+            this.BtnSil.TabIndex = 11;
             this.BtnSil.Text = "Sil";
             this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
@@ -224,69 +216,63 @@ namespace TicariOtomasyon
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKaydet.Appearance.Options.UseFont = true;
             this.BtnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnKaydet.ImageOptions.SvgImage")));
-            this.BtnKaydet.Location = new System.Drawing.Point(54, 513);
-            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnKaydet.Location = new System.Drawing.Point(54, 497);
+            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(118, 36);
-            this.BtnKaydet.TabIndex = 57;
+            this.BtnKaydet.TabIndex = 10;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // RchAdres
             // 
             this.RchAdres.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RchAdres.Location = new System.Drawing.Point(80, 417);
-            this.RchAdres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RchAdres.Location = new System.Drawing.Point(80, 389);
+            this.RchAdres.Margin = new System.Windows.Forms.Padding(2);
+            this.RchAdres.MaxLength = 500;
             this.RchAdres.Name = "RchAdres";
             this.RchAdres.Size = new System.Drawing.Size(244, 91);
-            this.RchAdres.TabIndex = 39;
+            this.RchAdres.TabIndex = 9;
             this.RchAdres.Text = "";
             // 
             // TxtMail
             // 
-            this.TxtMail.Location = new System.Drawing.Point(58, 254);
-            this.TxtMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtMail.Location = new System.Drawing.Point(60, 230);
+            this.TxtMail.Margin = new System.Windows.Forms.Padding(2);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtMail.Properties.Appearance.Options.UseFont = true;
+            this.TxtMail.Properties.MaxLength = 50;
             this.TxtMail.Size = new System.Drawing.Size(264, 26);
-            this.TxtMail.TabIndex = 56;
+            this.TxtMail.TabIndex = 5;
             // 
             // TxtSoyad
             // 
-            this.TxtSoyad.Location = new System.Drawing.Point(80, 130);
-            this.TxtSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSoyad.Location = new System.Drawing.Point(81, 106);
+            this.TxtSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtSoyad.Properties.Appearance.Options.UseFont = true;
+            this.TxtSoyad.Properties.MaxLength = 50;
             this.TxtSoyad.Size = new System.Drawing.Size(243, 26);
-            this.TxtSoyad.TabIndex = 52;
-            // 
-            // MskTelefon1
-            // 
-            this.MskTelefon1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTelefon1.Location = new System.Drawing.Point(90, 211);
-            this.MskTelefon1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MskTelefon1.Mask = "(999) 000-0000";
-            this.MskTelefon1.Name = "MskTelefon1";
-            this.MskTelefon1.Size = new System.Drawing.Size(234, 27);
-            this.MskTelefon1.TabIndex = 51;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // TxtAd
             // 
-            this.TxtAd.Location = new System.Drawing.Point(54, 89);
-            this.TxtAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtAd.Location = new System.Drawing.Point(56, 65);
+            this.TxtAd.Margin = new System.Windows.Forms.Padding(2);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtAd.Properties.Appearance.Options.UseFont = true;
+            this.TxtAd.Properties.MaxLength = 50;
             this.TxtAd.Size = new System.Drawing.Size(268, 26);
-            this.TxtAd.TabIndex = 50;
+            this.TxtAd.TabIndex = 1;
             // 
             // Txtid
             // 
             this.Txtid.Enabled = false;
-            this.Txtid.Location = new System.Drawing.Point(54, 49);
-            this.Txtid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txtid.Location = new System.Drawing.Point(56, 25);
+            this.Txtid.Margin = new System.Windows.Forms.Padding(2);
             this.Txtid.Name = "Txtid";
             this.Txtid.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Txtid.Properties.Appearance.Options.UseFont = true;
@@ -297,8 +283,8 @@ namespace TicariOtomasyon
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(23, 445);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl9.Location = new System.Drawing.Point(23, 396);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(43, 20);
             this.labelControl9.TabIndex = 48;
@@ -308,8 +294,8 @@ namespace TicariOtomasyon
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(23, 89);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Location = new System.Drawing.Point(23, 68);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(21, 20);
             this.labelControl1.TabIndex = 41;
@@ -319,8 +305,8 @@ namespace TicariOtomasyon
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(23, 49);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl3.Location = new System.Drawing.Point(23, 28);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(20, 20);
             this.labelControl3.TabIndex = 40;
@@ -336,10 +322,10 @@ namespace TicariOtomasyon
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(8, 10);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1052, 609);
             this.gridControl1.TabIndex = 5;
@@ -348,6 +334,8 @@ namespace TicariOtomasyon
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.MskTelefon1);
+            this.groupControl1.Controls.Add(this.MskTc);
             this.groupControl1.Controls.Add(this.BtnTemizle);
             this.groupControl1.Controls.Add(this.TxtGorev);
             this.groupControl1.Controls.Add(this.labelControl11);
@@ -356,7 +344,6 @@ namespace TicariOtomasyon
             this.groupControl1.Controls.Add(this.CmbIlce);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.MskTc);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.CmbIl);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -366,29 +353,55 @@ namespace TicariOtomasyon
             this.groupControl1.Controls.Add(this.RchAdres);
             this.groupControl1.Controls.Add(this.TxtMail);
             this.groupControl1.Controls.Add(this.TxtSoyad);
-            this.groupControl1.Controls.Add(this.MskTelefon1);
             this.groupControl1.Controls.Add(this.TxtAd);
             this.groupControl1.Controls.Add(this.Txtid);
             this.groupControl1.Controls.Add(this.labelControl9);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Location = new System.Drawing.Point(1065, 10);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
+            this.groupControl1.ShowCaption = false;
             this.groupControl1.Size = new System.Drawing.Size(352, 609);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // MskTelefon1
+            // 
+            this.MskTelefon1.Location = new System.Drawing.Point(81, 187);
+            this.MskTelefon1.Margin = new System.Windows.Forms.Padding(2);
+            this.MskTelefon1.Name = "MskTelefon1";
+            this.MskTelefon1.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskTelefon1.Properties.Appearance.Options.UseFont = true;
+            this.MskTelefon1.Properties.Mask.EditMask = "(999) 000-0000";
+            this.MskTelefon1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.MskTelefon1.Properties.MaxLength = 50;
+            this.MskTelefon1.Size = new System.Drawing.Size(243, 26);
+            this.MskTelefon1.TabIndex = 73;
+            // 
+            // MskTc
+            // 
+            this.MskTc.Location = new System.Drawing.Point(59, 147);
+            this.MskTc.Margin = new System.Windows.Forms.Padding(2);
+            this.MskTc.Name = "MskTc";
+            this.MskTc.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskTc.Properties.Appearance.Options.UseFont = true;
+            this.MskTc.Properties.Mask.EditMask = "99999999999";
+            this.MskTc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.MskTc.Properties.MaxLength = 50;
+            this.MskTc.Size = new System.Drawing.Size(265, 26);
+            this.MskTc.TabIndex = 72;
             // 
             // BtnTemizle
             // 
             this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTemizle.Appearance.Options.UseFont = true;
             this.BtnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTemizle.ImageOptions.SvgImage")));
-            this.BtnTemizle.Location = new System.Drawing.Point(194, 553);
-            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTemizle.Location = new System.Drawing.Point(194, 548);
+            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTemizle.Name = "BtnTemizle";
             this.BtnTemizle.Size = new System.Drawing.Size(112, 36);
-            this.BtnTemizle.TabIndex = 73;
+            this.BtnTemizle.TabIndex = 13;
             this.BtnTemizle.Text = "Temizle";
             // 
             // FrmPersonel
@@ -398,7 +411,7 @@ namespace TicariOtomasyon
             this.ClientSize = new System.Drawing.Size(1426, 687);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPersonel";
             this.Text = "PERSONEL";
             this.Load += new System.EventHandler(this.FrmPersonel_Load);
@@ -414,6 +427,8 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MskTelefon1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MskTc.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,7 +442,6 @@ namespace TicariOtomasyon
         private DevExpress.XtraEditors.ComboBoxEdit CmbIlce;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private System.Windows.Forms.MaskedTextBox MskTc;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.ComboBoxEdit CmbIl;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -437,7 +451,6 @@ namespace TicariOtomasyon
         private System.Windows.Forms.RichTextBox RchAdres;
         private DevExpress.XtraEditors.TextEdit TxtMail;
         private DevExpress.XtraEditors.TextEdit TxtSoyad;
-        private System.Windows.Forms.MaskedTextBox MskTelefon1;
         private DevExpress.XtraEditors.TextEdit TxtAd;
         private DevExpress.XtraEditors.TextEdit Txtid;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -447,5 +460,7 @@ namespace TicariOtomasyon
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton BtnTemizle;
+        private DevExpress.XtraEditors.TextEdit MskTc;
+        private DevExpress.XtraEditors.TextEdit MskTelefon1;
     }
 }

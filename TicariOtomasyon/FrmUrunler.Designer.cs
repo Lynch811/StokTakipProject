@@ -285,6 +285,8 @@ namespace TicariOtomasyon
             this.TxtSatis.Name = "TxtSatis";
             this.TxtSatis.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtSatis.Properties.Appearance.Options.UseFont = true;
+            this.TxtSatis.Properties.Mask.EditMask = "c";
+            this.TxtSatis.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TxtSatis.Properties.MaxLength = 18;
             this.TxtSatis.Size = new System.Drawing.Size(225, 26);
             this.TxtSatis.TabIndex = 7;
@@ -296,6 +298,8 @@ namespace TicariOtomasyon
             this.TxtAlis.Name = "TxtAlis";
             this.TxtAlis.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtAlis.Properties.Appearance.Options.UseFont = true;
+            this.TxtAlis.Properties.Mask.EditMask = "c2";
+            this.TxtAlis.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TxtAlis.Properties.MaxLength = 18;
             this.TxtAlis.Size = new System.Drawing.Size(226, 26);
             this.TxtAlis.TabIndex = 6;
@@ -306,13 +310,14 @@ namespace TicariOtomasyon
             this.NudAdet.Location = new System.Drawing.Point(78, 230);
             this.NudAdet.Margin = new System.Windows.Forms.Padding(2);
             this.NudAdet.Maximum = new decimal(new int[] {
-            32760,
+            2147483600,
             0,
             0,
             0});
             this.NudAdet.Name = "NudAdet";
             this.NudAdet.Size = new System.Drawing.Size(256, 27);
             this.NudAdet.TabIndex = 5;
+            this.NudAdet.ThousandsSeparator = true;
             // 
             // TxtModel
             // 

@@ -106,5 +106,10 @@ namespace TicariOtomasyon
                 frNotlar.Show();
             }
         }
+
+        private void FrmAnaSayfa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

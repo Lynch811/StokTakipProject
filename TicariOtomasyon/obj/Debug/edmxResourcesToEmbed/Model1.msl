@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DboTicariOtomasyonModelStoreContainer" CdmEntityContainer="DboTicariOtomasyonEntities">
+  <EntityContainerMapping StorageEntityContainer="DboTicariOtomasyonModelStoreContainer" CdmEntityContainer="DboTicariOtomasyonEntities1">
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="DboTicariOtomasyonModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -160,12 +160,13 @@
     <EntitySetMapping Name="TBL_NOTLAR">
       <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_NOTLAR">
         <MappingFragment StoreEntitySet="TBL_NOTLAR">
-          <ScalarProperty Name="NOTID" ColumnName="NOTID" />
-          <ScalarProperty Name="NOTTARIH" ColumnName="NOTTARIH" />
-          <ScalarProperty Name="NOTSAAT" ColumnName="NOTSAAT" />
-          <ScalarProperty Name="NOTBASLIK" ColumnName="NOTBASLIK" />
-          <ScalarProperty Name="NOTDETAY" ColumnName="NOTDETAY" />
-          <ScalarProperty Name="NOTOLUSTURAN" ColumnName="NOTOLUSTURAN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="SAAT" ColumnName="SAAT" />
+          <ScalarProperty Name="BASLIK" ColumnName="BASLIK" />
+          <ScalarProperty Name="DETAY" ColumnName="DETAY" />
+          <ScalarProperty Name="OLUSTURAN" ColumnName="OLUSTURAN" />
+          <ScalarProperty Name="HITAP" ColumnName="HITAP" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -227,5 +228,29 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DboTicariOtomasyonModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DboTicariOtomasyonModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DboTicariOtomasyonModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DboTicariOtomasyonModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DboTicariOtomasyonModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DboTicariOtomasyonModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DboTicariOtomasyonModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DboTicariOtomasyonModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DboTicariOtomasyonModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

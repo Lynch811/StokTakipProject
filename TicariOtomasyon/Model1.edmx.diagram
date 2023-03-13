@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af53fa9829324689a66e74db38218457" Name="Diagram1">
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_BANKALAR" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_FATURABILGI" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_FATURADETAY" Width="1.5" PointX="8" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_FIRMALAR" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_ILCELER" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_SEHIRLER" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_SEMTMAH" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_ULKELER" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_GIDERLER" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_MUSTERILER" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_NOTLAR" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_PERSONELLER" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_STOKLAR" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DboTicariOtomasyonModel.TBL_URUNLER" Width="1.5" PointX="10.375" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_TBL_BANKALAR_TBL_FIRMALAR" ManuallyRouted="false" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_TBL_FATURADETAY_TBL_FATURABILGI" ManuallyRouted="false" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_Ilceler_Sehirler" ManuallyRouted="false" />
+        <AssociationConnector Association="DboTicariOtomasyonModel.FK_SemtMah_Ilceler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

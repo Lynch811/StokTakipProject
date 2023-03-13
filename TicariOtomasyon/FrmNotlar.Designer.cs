@@ -68,7 +68,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 117);
+            this.labelControl2.Location = new System.Drawing.Point(23, 107);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(35, 20);
@@ -101,11 +101,11 @@ namespace TicariOtomasyon
             this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTemizle.Appearance.Options.UseFont = true;
             this.BtnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTemizle.ImageOptions.SvgImage")));
-            this.BtnTemizle.Location = new System.Drawing.Point(191, 532);
+            this.BtnTemizle.Location = new System.Drawing.Point(23, 523);
             this.BtnTemizle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTemizle.Name = "BtnTemizle";
-            this.BtnTemizle.Size = new System.Drawing.Size(116, 35);
-            this.BtnTemizle.TabIndex = 73;
+            this.BtnTemizle.Size = new System.Drawing.Size(133, 45);
+            this.BtnTemizle.TabIndex = 9;
             this.BtnTemizle.Text = "Temizle";
             this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
             // 
@@ -113,7 +113,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(23, 280);
+            this.labelControl7.Location = new System.Drawing.Point(23, 276);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(43, 20);
@@ -124,7 +124,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(23, 158);
+            this.labelControl6.Location = new System.Drawing.Point(23, 147);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(47, 20);
@@ -135,7 +135,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(23, 239);
+            this.labelControl5.Location = new System.Drawing.Point(23, 225);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(40, 20);
@@ -146,7 +146,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(23, 198);
+            this.labelControl4.Location = new System.Drawing.Point(23, 186);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(70, 20);
@@ -176,44 +176,48 @@ namespace TicariOtomasyon
             this.groupControl1.Location = new System.Drawing.Point(1068, 11);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
+            this.groupControl1.ShowCaption = false;
             this.groupControl1.Size = new System.Drawing.Size(352, 609);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "groupControl1";
             // 
             // TxtHitap
             // 
-            this.TxtHitap.Location = new System.Drawing.Point(67, 236);
+            this.TxtHitap.Location = new System.Drawing.Point(70, 222);
             this.TxtHitap.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHitap.Name = "TxtHitap";
             this.TxtHitap.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtHitap.Properties.Appearance.Options.UseFont = true;
+            this.TxtHitap.Properties.MaxLength = 50;
             this.TxtHitap.Size = new System.Drawing.Size(255, 26);
-            this.TxtHitap.TabIndex = 85;
+            this.TxtHitap.TabIndex = 5;
             // 
             // TxtOlusturan
             // 
-            this.TxtOlusturan.Location = new System.Drawing.Point(97, 195);
+            this.TxtOlusturan.Location = new System.Drawing.Point(100, 183);
             this.TxtOlusturan.Margin = new System.Windows.Forms.Padding(2);
             this.TxtOlusturan.Name = "TxtOlusturan";
             this.TxtOlusturan.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtOlusturan.Properties.Appearance.Options.UseFont = true;
+            this.TxtOlusturan.Properties.MaxLength = 50;
             this.TxtOlusturan.Size = new System.Drawing.Size(225, 26);
-            this.TxtOlusturan.TabIndex = 84;
+            this.TxtOlusturan.TabIndex = 4;
             // 
             // TxtBaslik
             // 
-            this.TxtBaslik.Location = new System.Drawing.Point(80, 155);
+            this.TxtBaslik.Location = new System.Drawing.Point(83, 144);
             this.TxtBaslik.Margin = new System.Windows.Forms.Padding(2);
             this.TxtBaslik.Name = "TxtBaslik";
             this.TxtBaslik.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtBaslik.Properties.Appearance.Options.UseFont = true;
+            this.TxtBaslik.Properties.MaxLength = 50;
             this.TxtBaslik.Size = new System.Drawing.Size(242, 26);
-            this.TxtBaslik.TabIndex = 83;
+            this.TxtBaslik.TabIndex = 3;
             // 
             // TxtSaat
             // 
             this.TxtSaat.EditValue = new System.DateTime(2023, 3, 1, 0, 0, 0, 0);
-            this.TxtSaat.Location = new System.Drawing.Point(65, 114);
+            this.TxtSaat.Location = new System.Drawing.Point(68, 104);
             this.TxtSaat.Name = "TxtSaat";
             this.TxtSaat.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtSaat.Properties.Appearance.Options.UseFont = true;
@@ -224,12 +228,12 @@ namespace TicariOtomasyon
             this.TxtSaat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.TxtSaat.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.TxtSaat.Size = new System.Drawing.Size(257, 26);
-            this.TxtSaat.TabIndex = 82;
+            this.TxtSaat.TabIndex = 2;
             // 
             // TxtTarih
             // 
             this.TxtTarih.EditValue = null;
-            this.TxtTarih.Location = new System.Drawing.Point(65, 73);
+            this.TxtTarih.Location = new System.Drawing.Point(68, 63);
             this.TxtTarih.Name = "TxtTarih";
             this.TxtTarih.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtTarih.Properties.Appearance.Options.UseFont = true;
@@ -238,18 +242,18 @@ namespace TicariOtomasyon
             this.TxtTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.TxtTarih.Size = new System.Drawing.Size(257, 26);
-            this.TxtTarih.TabIndex = 81;
+            this.TxtTarih.TabIndex = 1;
             // 
             // BtnGuncelle
             // 
             this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnGuncelle.Appearance.Options.UseFont = true;
             this.BtnGuncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnGuncelle.ImageOptions.SvgImage")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(43, 532);
+            this.BtnGuncelle.Location = new System.Drawing.Point(179, 523);
             this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(123, 34);
-            this.BtnGuncelle.TabIndex = 59;
+            this.BtnGuncelle.Size = new System.Drawing.Size(146, 45);
+            this.BtnGuncelle.TabIndex = 10;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
@@ -258,11 +262,11 @@ namespace TicariOtomasyon
             this.BtnSil.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnSil.Appearance.Options.UseFont = true;
             this.BtnSil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnSil.ImageOptions.SvgImage")));
-            this.BtnSil.Location = new System.Drawing.Point(191, 492);
+            this.BtnSil.Location = new System.Drawing.Point(179, 458);
             this.BtnSil.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(116, 35);
-            this.BtnSil.TabIndex = 58;
+            this.BtnSil.Size = new System.Drawing.Size(146, 45);
+            this.BtnSil.TabIndex = 8;
             this.BtnSil.Text = "Sil";
             this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
@@ -271,27 +275,29 @@ namespace TicariOtomasyon
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKaydet.Appearance.Options.UseFont = true;
             this.BtnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnKaydet.ImageOptions.SvgImage")));
-            this.BtnKaydet.Location = new System.Drawing.Point(43, 492);
+            this.BtnKaydet.Location = new System.Drawing.Point(23, 458);
             this.BtnKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(123, 36);
-            this.BtnKaydet.TabIndex = 57;
+            this.BtnKaydet.Size = new System.Drawing.Size(133, 45);
+            this.BtnKaydet.TabIndex = 7;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // TxtDetay
             // 
             this.TxtDetay.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtDetay.Location = new System.Drawing.Point(70, 279);
+            this.TxtDetay.Location = new System.Drawing.Point(73, 262);
             this.TxtDetay.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtDetay.MaxLength = 500;
             this.TxtDetay.Name = "TxtDetay";
             this.TxtDetay.Size = new System.Drawing.Size(252, 173);
-            this.TxtDetay.TabIndex = 39;
+            this.TxtDetay.TabIndex = 6;
             this.TxtDetay.Text = "";
             // 
             // Txtid
             // 
-            this.Txtid.Location = new System.Drawing.Point(54, 36);
+            this.Txtid.Enabled = false;
+            this.Txtid.Location = new System.Drawing.Point(57, 22);
             this.Txtid.Margin = new System.Windows.Forms.Padding(2);
             this.Txtid.Name = "Txtid";
             this.Txtid.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -303,7 +309,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(23, 76);
+            this.labelControl1.Location = new System.Drawing.Point(23, 66);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(39, 20);
@@ -314,7 +320,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(23, 36);
+            this.labelControl3.Location = new System.Drawing.Point(23, 25);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(20, 20);

@@ -28,6 +28,7 @@ namespace TicariOtomasyon
 
         void SehirListesi()
         {
+           
             //şehirlerin sql den çekilip listelenmesi
             SqlCommand komut = new SqlCommand("SELECT SehirAdi FROM TBL_SEHIRLER", bgl.baglanti());
             SqlDataReader dr = komut.ExecuteReader();
@@ -57,7 +58,7 @@ namespace TicariOtomasyon
             SehirListesi();
             Temizle();
         }
-
+        
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
             //seçili ile göre ilçenin gelmesi
@@ -72,6 +73,8 @@ namespace TicariOtomasyon
                 CmbIlce.Properties.Items.Add(dr[0]);
             }
             bgl.baglanti().Close();
+
+            
         }
         
         private void BtnKaydet_Click(object sender, EventArgs e)

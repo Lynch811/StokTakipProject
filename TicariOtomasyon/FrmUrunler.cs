@@ -134,3 +134,22 @@ namespace TicariOtomasyon
         }
     }
 }
+
+
+//TBL_URUNLER yu = new TBL_URUNLER();
+//yu.URUNAD = TxtAd.Text;
+//yu.MARKA = TxtMarka.Text;
+//yu.MODEL = TxtModel.Text;
+//yu.YIL = MskYil.Text;
+////yu.ADET = int.Parse((NudAdet.Value).ToString());
+//yu.ALISFIYAT = decimal.Parse(TxtAlis.Text);
+//yu.SATISFIYAT = decimal.Parse(TxtSatis.Text);
+//yu.DETAY = RchDetay.Text;
+//_ent.TBL_URUNLER.Add(yu);
+//_ent.SaveChanges();
+//MessageBox.Show("Ürün sisteme eklendi","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+//listele();
+
+
+//DboTicariOtomasyonEntities1 _ent = new DboTicariOtomasyonEntities1();
+//gridControl1.DataSource = _ent.TBL_URUNLER.ToList();
