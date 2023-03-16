@@ -111,5 +111,15 @@ namespace TicariOtomasyon
         {
 
         }
+        FrmHareketler frHareket;
+        private void BtnHareketler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frHareket == null)
+            {
+                frHareket = new FrmHareketler();
+                frHareket.MdiParent = this;
+                frHareket.Show();
+            }
+        }
     }
 }

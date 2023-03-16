@@ -396,6 +396,7 @@ namespace TicariOtomasyon
             // 
             this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnTemizle.Appearance.Options.UseFont = true;
+            this.BtnTemizle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTemizle.ImageOptions.SvgImage")));
             this.BtnTemizle.Location = new System.Drawing.Point(194, 548);
             this.BtnTemizle.Margin = new System.Windows.Forms.Padding(2);
@@ -406,8 +407,10 @@ namespace TicariOtomasyon
             // 
             // FrmPersonel
             // 
+            this.AcceptButton = this.BtnKaydet;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnTemizle;
             this.ClientSize = new System.Drawing.Size(1426, 687);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);

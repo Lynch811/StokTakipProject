@@ -416,3 +416,4 @@ C:\Users\talha\Source\Repos\GorselOdev\TicariOtomasyon\obj\Debug\TicariOtomasyon
 C:\Users\talha\Source\Repos\GorselOdev\TicariOtomasyon\obj\Debug\TicariOtomasyon.csproj.CopyComplete
 C:\Users\talha\Source\Repos\GorselOdev\TicariOtomasyon\obj\Debug\TicariOtomasyon.exe
 C:\Users\talha\Source\Repos\GorselOdev\TicariOtomasyon\obj\Debug\TicariOtomasyon.pdb
+C:\Users\talha\source\repos\GorselOdev\TicariOtomasyon\obj\Debug\TicariOtomasyon.FrmHareketler.resources
