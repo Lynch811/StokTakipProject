@@ -32,11 +32,11 @@ namespace TicariOtomasyon
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            this.TxtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
+            this.TxtSifre = new DevExpress.XtraEditors.TextEdit();
+            this.BtnGiris = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKullaniciAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtSifre.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,37 +58,40 @@ namespace TicariOtomasyon
             this.label2.Location = new System.Drawing.Point(257, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 34);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Şifre";
             // 
-            // textEdit1
+            // TxtKullaniciAdi
             // 
-            this.textEdit1.Location = new System.Drawing.Point(341, 128);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(248, 30);
-            this.textEdit1.TabIndex = 2;
+            this.TxtKullaniciAdi.Location = new System.Drawing.Point(341, 128);
+            this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
+            this.TxtKullaniciAdi.Properties.Appearance.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtKullaniciAdi.Properties.Appearance.Options.UseFont = true;
+            this.TxtKullaniciAdi.Size = new System.Drawing.Size(248, 30);
+            this.TxtKullaniciAdi.TabIndex = 1;
             // 
-            // textEdit2
+            // TxtSifre
             // 
-            this.textEdit2.Location = new System.Drawing.Point(341, 195);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.UseSystemPasswordChar = true;
-            this.textEdit2.Size = new System.Drawing.Size(248, 30);
-            this.textEdit2.TabIndex = 3;
+            this.TxtSifre.Location = new System.Drawing.Point(341, 195);
+            this.TxtSifre.Name = "TxtSifre";
+            this.TxtSifre.Properties.Appearance.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtSifre.Properties.Appearance.Options.UseFont = true;
+            this.TxtSifre.Properties.UseSystemPasswordChar = true;
+            this.TxtSifre.Size = new System.Drawing.Size(248, 30);
+            this.TxtSifre.TabIndex = 2;
             // 
-            // simpleButton1
+            // BtnGiris
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(407, 257);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(131, 37);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Giriş Yap";
+            this.BtnGiris.BackColor = System.Drawing.Color.Transparent;
+            this.BtnGiris.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnGiris.Location = new System.Drawing.Point(403, 253);
+            this.BtnGiris.Name = "BtnGiris";
+            this.BtnGiris.Size = new System.Drawing.Size(132, 45);
+            this.BtnGiris.TabIndex = 3;
+            this.BtnGiris.Text = "Giriş Yap";
+            this.BtnGiris.UseVisualStyleBackColor = false;
+            this.BtnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
+            this.BtnGiris.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // FrmAdmin
             // 
@@ -96,17 +99,17 @@ namespace TicariOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(860, 433);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.BtnGiris);
+            this.Controls.Add(this.TxtSifre);
+            this.Controls.Add(this.TxtKullaniciAdi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKullaniciAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtSifre.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,8 +119,8 @@ namespace TicariOtomasyon
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.TextEdit TxtKullaniciAdi;
+        private DevExpress.XtraEditors.TextEdit TxtSifre;
+        private System.Windows.Forms.Button BtnGiris;
     }
 }
