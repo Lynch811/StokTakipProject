@@ -108,6 +108,7 @@ namespace TicariOtomasyon
             this.BtnStoklar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnStoklar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnStoklar.Name = "BtnStoklar";
+            this.BtnStoklar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStoklar_ItemClick);
             // 
             // BtnMusteriler
             // 
@@ -242,7 +243,7 @@ namespace TicariOtomasyon
             // 
             this.BtnHareketler.Caption = "HAREKETLER";
             this.BtnHareketler.Id = 15;
-            this.BtnHareketler.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.BtnHareketler.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnHareketler.ImageOptions.SvgImage")));
             this.BtnHareketler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnHareketler.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnHareketler.Name = "BtnHareketler";
@@ -252,10 +253,11 @@ namespace TicariOtomasyon
             // 
             this.BtnRaporlar.Caption = "RAPORLAR";
             this.BtnRaporlar.Id = 16;
-            this.BtnRaporlar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.BtnRaporlar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnRaporlar.ImageOptions.SvgImage")));
             this.BtnRaporlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnRaporlar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnRaporlar.Name = "BtnRaporlar";
+            this.BtnRaporlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnRaporlar_ItemClick);
             // 
             // ribbonPage1
             // 
