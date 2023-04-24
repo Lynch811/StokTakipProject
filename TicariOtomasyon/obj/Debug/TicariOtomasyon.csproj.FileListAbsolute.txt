@@ -481,3 +481,4 @@ C:\Users\talha\source\repos\GorselOdev\TicariOtomasyon\bin\Debug\zh-CHT\Microsof
 C:\Users\talha\source\repos\GorselOdev\TicariOtomasyon\obj\Debug\TicariOtomasyon.FrmStoklar.resources
 C:\Users\talha\source\repos\GorselOdev\TicariOtomasyon\bin\Debug\DevExpress.XtraCharts.v20.1.UI.dll
 C:\Users\talha\source\repos\GorselOdev\TicariOtomasyon\bin\Debug\DevExpress.XtraCharts.v20.1.UI.xml
+C:\Users\talha\source\repos\GorselOdev\TicariOtomasyon\obj\Debug\TicariOtomasyon.FrmAyarlar.resources
