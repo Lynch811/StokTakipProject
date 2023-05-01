@@ -36,8 +36,13 @@ namespace TicariOtomasyon
             this.label2 = new System.Windows.Forms.Label();
             this.TxtSifre = new System.Windows.Forms.TextBox();
             this.TxtKadi = new System.Windows.Forms.TextBox();
-            this.BtnIslem = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,12 +66,13 @@ namespace TicariOtomasyon
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(121, 315);
+            this.label1.Location = new System.Drawing.Point(148, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 34);
             this.label1.TabIndex = 7;
@@ -76,7 +82,7 @@ namespace TicariOtomasyon
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(158, 381);
+            this.label2.Location = new System.Drawing.Point(185, 357);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 34);
             this.label2.TabIndex = 8;
@@ -85,29 +91,18 @@ namespace TicariOtomasyon
             // TxtSifre
             // 
             this.TxtSifre.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtSifre.Location = new System.Drawing.Point(311, 389);
+            this.TxtSifre.Location = new System.Drawing.Point(338, 365);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(275, 40);
+            this.TxtSifre.Size = new System.Drawing.Size(345, 40);
             this.TxtSifre.TabIndex = 10;
             // 
             // TxtKadi
             // 
             this.TxtKadi.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtKadi.Location = new System.Drawing.Point(311, 312);
+            this.TxtKadi.Location = new System.Drawing.Point(338, 288);
             this.TxtKadi.Name = "TxtKadi";
-            this.TxtKadi.Size = new System.Drawing.Size(275, 40);
+            this.TxtKadi.Size = new System.Drawing.Size(345, 40);
             this.TxtKadi.TabIndex = 11;
-            // 
-            // BtnIslem
-            // 
-            this.BtnIslem.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnIslem.Location = new System.Drawing.Point(329, 462);
-            this.BtnIslem.Name = "BtnIslem";
-            this.BtnIslem.Size = new System.Drawing.Size(229, 52);
-            this.BtnIslem.TabIndex = 12;
-            this.BtnIslem.Text = "Kaydet";
-            this.BtnIslem.UseVisualStyleBackColor = true;
-            this.BtnIslem.Click += new System.EventHandler(this.BtnIslem_Click);
             // 
             // pictureBox1
             // 
@@ -119,14 +114,89 @@ namespace TicariOtomasyon
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnTemizle
+            // 
+            this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnTemizle.Appearance.Options.UseFont = true;
+            this.BtnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTemizle.ImageOptions.SvgImage")));
+            this.BtnTemizle.Location = new System.Drawing.Point(520, 493);
+            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnTemizle.Name = "BtnTemizle";
+            this.BtnTemizle.Size = new System.Drawing.Size(178, 48);
+            this.BtnTemizle.TabIndex = 18;
+            this.BtnTemizle.Text = "Temizle";
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnGuncelle.Appearance.Options.UseFont = true;
+            this.BtnGuncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnGuncelle.ImageOptions.SvgImage")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(338, 493);
+            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(178, 48);
+            this.BtnGuncelle.TabIndex = 17;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            // 
+            // BtnSil
+            // 
+            this.BtnSil.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSil.Appearance.Options.UseFont = true;
+            this.BtnSil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnSil.ImageOptions.SvgImage")));
+            this.BtnSil.Location = new System.Drawing.Point(520, 424);
+            this.BtnSil.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(178, 48);
+            this.BtnSil.TabIndex = 16;
+            this.BtnSil.Text = "Sil";
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
+            // 
+            // BtnKaydet
+            // 
+            this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnKaydet.Appearance.Options.UseFont = true;
+            this.BtnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnKaydet.ImageOptions.SvgImage")));
+            this.BtnKaydet.Location = new System.Drawing.Point(338, 424);
+            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(178, 48);
+            this.BtnKaydet.TabIndex = 15;
+            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
+            // 
+            // TxtId
+            // 
+            this.TxtId.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtId.Location = new System.Drawing.Point(338, 221);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(345, 40);
+            this.TxtId.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(215, 224);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 34);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "ID";
+            // 
             // FrmAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1426, 687);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TxtId);
+            this.Controls.Add(this.BtnTemizle);
+            this.Controls.Add(this.BtnGuncelle);
+            this.Controls.Add(this.BtnSil);
+            this.Controls.Add(this.BtnKaydet);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.BtnIslem);
             this.Controls.Add(this.TxtKadi);
             this.Controls.Add(this.TxtSifre);
             this.Controls.Add(this.label2);
@@ -151,7 +221,12 @@ namespace TicariOtomasyon
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtSifre;
         private System.Windows.Forms.TextBox TxtKadi;
-        private System.Windows.Forms.Button BtnIslem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.SimpleButton BtnTemizle;
+        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
+        private DevExpress.XtraEditors.SimpleButton BtnSil;
+        private DevExpress.XtraEditors.SimpleButton BtnKaydet;
+        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.Label label3;
     }
 }

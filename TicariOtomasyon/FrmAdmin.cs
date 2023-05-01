@@ -43,5 +43,7 @@ namespace TicariOtomasyon
             }
             bgl.baglanti().Close();
         }
+
+        
     }
 }
