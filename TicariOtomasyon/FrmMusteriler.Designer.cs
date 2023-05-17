@@ -44,21 +44,24 @@ namespace TicariOtomasyon
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.MskTelefon2 = new DevExpress.XtraEditors.TextEdit();
-            this.MskTelefon1 = new DevExpress.XtraEditors.TextEdit();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.CmbIl = new DevExpress.XtraEditors.ComboBoxEdit();
             this.MskTc = new DevExpress.XtraEditors.TextEdit();
-            this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.MskTelefon2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.MskTelefon1 = new DevExpress.XtraEditors.TextEdit();
+            this.CmbIlce = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TxtVergidaire = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.CmbIlce = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.CmbIl = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMail.Properties)).BeginInit();
@@ -67,12 +70,18 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.Txtid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MskTc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MskTelefon2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MskTelefon1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MskTc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtVergidaire.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbIlce.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbIl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtVergidaire.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridView1
@@ -86,11 +95,11 @@ namespace TicariOtomasyon
             // gridControl1
             // 
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl1.Location = new System.Drawing.Point(8, 10);
+            this.gridControl1.Location = new System.Drawing.Point(16, 361);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1052, 609);
+            this.gridControl1.Size = new System.Drawing.Size(1329, 284);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -99,77 +108,77 @@ namespace TicariOtomasyon
             // 
             this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnGuncelle.Appearance.Options.UseFont = true;
-            this.BtnGuncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnGuncelle.ImageOptions.SvgImage")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(44, 565);
+            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(93, 6);
             this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(123, 34);
+            this.BtnGuncelle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnGuncelle.Size = new System.Drawing.Size(41, 34);
             this.BtnGuncelle.TabIndex = 13;
-            this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
             this.BtnSil.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnSil.Appearance.Options.UseFont = true;
-            this.BtnSil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnSil.ImageOptions.SvgImage")));
-            this.BtnSil.Location = new System.Drawing.Point(192, 526);
+            this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
+            this.BtnSil.Location = new System.Drawing.Point(50, 5);
             this.BtnSil.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(116, 35);
+            this.BtnSil.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnSil.Size = new System.Drawing.Size(39, 35);
             this.BtnSil.TabIndex = 12;
-            this.BtnSil.Text = "Sil";
             this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnKaydet
             // 
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKaydet.Appearance.Options.UseFont = true;
-            this.BtnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnKaydet.ImageOptions.SvgImage")));
-            this.BtnKaydet.Location = new System.Drawing.Point(44, 526);
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
+            this.BtnKaydet.Location = new System.Drawing.Point(4, 4);
             this.BtnKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(123, 36);
+            this.BtnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnKaydet.Size = new System.Drawing.Size(42, 36);
             this.BtnKaydet.TabIndex = 11;
-            this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // RchAdres
             // 
             this.RchAdres.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RchAdres.Location = new System.Drawing.Point(78, 424);
+            this.RchAdres.Location = new System.Drawing.Point(916, 37);
             this.RchAdres.Margin = new System.Windows.Forms.Padding(2);
             this.RchAdres.MaxLength = 500;
             this.RchAdres.Name = "RchAdres";
-            this.RchAdres.Size = new System.Drawing.Size(244, 87);
+            this.RchAdres.Size = new System.Drawing.Size(359, 185);
             this.RchAdres.TabIndex = 10;
             this.RchAdres.Text = "";
             // 
             // TxtMail
             // 
-            this.TxtMail.Location = new System.Drawing.Point(60, 266);
+            this.TxtMail.Location = new System.Drawing.Point(117, 196);
             this.TxtMail.Margin = new System.Windows.Forms.Padding(2);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtMail.Properties.Appearance.Options.UseFont = true;
             this.TxtMail.Properties.MaxLength = 50;
-            this.TxtMail.Size = new System.Drawing.Size(262, 26);
+            this.TxtMail.Size = new System.Drawing.Size(268, 26);
             this.TxtMail.TabIndex = 6;
             // 
             // TxtSoyad
             // 
-            this.TxtSoyad.Location = new System.Drawing.Point(79, 105);
+            this.TxtSoyad.Location = new System.Drawing.Point(117, 115);
             this.TxtSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtSoyad.Properties.Appearance.Options.UseFont = true;
             this.TxtSoyad.Properties.MaxLength = 50;
-            this.TxtSoyad.Size = new System.Drawing.Size(243, 26);
+            this.TxtSoyad.Size = new System.Drawing.Size(268, 26);
             this.TxtSoyad.TabIndex = 2;
             // 
             // TxtAd
             // 
-            this.TxtAd.Location = new System.Drawing.Point(54, 66);
+            this.TxtAd.Location = new System.Drawing.Point(117, 76);
             this.TxtAd.Margin = new System.Windows.Forms.Padding(2);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -181,7 +190,7 @@ namespace TicariOtomasyon
             // Txtid
             // 
             this.Txtid.Enabled = false;
-            this.Txtid.Location = new System.Drawing.Point(54, 28);
+            this.Txtid.Location = new System.Drawing.Point(117, 38);
             this.Txtid.Margin = new System.Windows.Forms.Padding(2);
             this.Txtid.Name = "Txtid";
             this.Txtid.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -193,7 +202,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(23, 436);
+            this.labelControl9.Location = new System.Drawing.Point(855, 41);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(43, 20);
@@ -204,7 +213,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(23, 69);
+            this.labelControl1.Location = new System.Drawing.Point(81, 79);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(21, 20);
@@ -215,7 +224,7 @@ namespace TicariOtomasyon
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(23, 31);
+            this.labelControl3.Location = new System.Drawing.Point(82, 41);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(20, 20);
@@ -224,69 +233,63 @@ namespace TicariOtomasyon
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.MskTelefon2);
-            this.groupControl1.Controls.Add(this.MskTelefon1);
-            this.groupControl1.Controls.Add(this.MskTc);
-            this.groupControl1.Controls.Add(this.BtnTemizle);
-            this.groupControl1.Controls.Add(this.TxtVergidaire);
-            this.groupControl1.Controls.Add(this.labelControl11);
-            this.groupControl1.Controls.Add(this.labelControl10);
-            this.groupControl1.Controls.Add(this.labelControl8);
-            this.groupControl1.Controls.Add(this.CmbIlce);
-            this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.CmbIl);
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.BtnGuncelle);
-            this.groupControl1.Controls.Add(this.BtnSil);
-            this.groupControl1.Controls.Add(this.BtnKaydet);
-            this.groupControl1.Controls.Add(this.RchAdres);
-            this.groupControl1.Controls.Add(this.TxtMail);
-            this.groupControl1.Controls.Add(this.TxtSoyad);
-            this.groupControl1.Controls.Add(this.TxtAd);
-            this.groupControl1.Controls.Add(this.Txtid);
-            this.groupControl1.Controls.Add(this.labelControl9);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Location = new System.Drawing.Point(1065, 10);
+            this.groupControl1.Controls.Add(this.groupControl4);
+            this.groupControl1.Controls.Add(this.groupControl3);
+            this.groupControl1.Location = new System.Drawing.Point(16, 15);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(352, 609);
+            this.groupControl1.Size = new System.Drawing.Size(1329, 331);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "groupControl1";
             // 
-            // MskTelefon2
+            // groupControl4
             // 
-            this.MskTelefon2.Location = new System.Drawing.Point(90, 226);
-            this.MskTelefon2.Margin = new System.Windows.Forms.Padding(2);
-            this.MskTelefon2.Name = "MskTelefon2";
-            this.MskTelefon2.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTelefon2.Properties.Appearance.Options.UseFont = true;
-            this.MskTelefon2.Properties.Mask.EditMask = "(999) 000-0000";
-            this.MskTelefon2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.MskTelefon2.Properties.MaxLength = 50;
-            this.MskTelefon2.Size = new System.Drawing.Size(232, 26);
-            this.MskTelefon2.TabIndex = 5;
+            this.groupControl4.Controls.Add(this.CmbIl);
+            this.groupControl4.Controls.Add(this.labelControl9);
+            this.groupControl4.Controls.Add(this.MskTc);
+            this.groupControl4.Controls.Add(this.MskTelefon2);
+            this.groupControl4.Controls.Add(this.labelControl6);
+            this.groupControl4.Controls.Add(this.RchAdres);
+            this.groupControl4.Controls.Add(this.labelControl2);
+            this.groupControl4.Controls.Add(this.MskTelefon1);
+            this.groupControl4.Controls.Add(this.TxtSoyad);
+            this.groupControl4.Controls.Add(this.CmbIlce);
+            this.groupControl4.Controls.Add(this.TxtAd);
+            this.groupControl4.Controls.Add(this.TxtVergidaire);
+            this.groupControl4.Controls.Add(this.Txtid);
+            this.groupControl4.Controls.Add(this.labelControl1);
+            this.groupControl4.Controls.Add(this.labelControl8);
+            this.groupControl4.Controls.Add(this.labelControl3);
+            this.groupControl4.Controls.Add(this.labelControl11);
+            this.groupControl4.Controls.Add(this.labelControl10);
+            this.groupControl4.Controls.Add(this.labelControl7);
+            this.groupControl4.Controls.Add(this.TxtMail);
+            this.groupControl4.Controls.Add(this.labelControl4);
+            this.groupControl4.Controls.Add(this.labelControl5);
+            this.groupControl4.GroupStyle = DevExpress.Utils.GroupStyle.Light;
+            this.groupControl4.Location = new System.Drawing.Point(20, 68);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(1292, 245);
+            this.groupControl4.TabIndex = 73;
+            this.groupControl4.Text = " ";
             // 
-            // MskTelefon1
+            // CmbIl
             // 
-            this.MskTelefon1.Location = new System.Drawing.Point(87, 186);
-            this.MskTelefon1.Margin = new System.Windows.Forms.Padding(2);
-            this.MskTelefon1.Name = "MskTelefon1";
-            this.MskTelefon1.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTelefon1.Properties.Appearance.Options.UseFont = true;
-            this.MskTelefon1.Properties.Mask.EditMask = "(999) 000-0000";
-            this.MskTelefon1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.MskTelefon1.Properties.MaxLength = 50;
-            this.MskTelefon1.Size = new System.Drawing.Size(235, 26);
-            this.MskTelefon1.TabIndex = 4;
+            this.CmbIl.Location = new System.Drawing.Point(536, 156);
+            this.CmbIl.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbIl.Name = "CmbIl";
+            this.CmbIl.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbIl.Properties.Appearance.Options.UseFont = true;
+            this.CmbIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbIl.Size = new System.Drawing.Size(268, 26);
+            this.CmbIl.TabIndex = 8;
+            this.CmbIl.SelectedIndexChanged += new System.EventHandler(this.CmbIl_SelectedIndexChanged);
             // 
             // MskTc
             // 
-            this.MskTc.Location = new System.Drawing.Point(79, 146);
+            this.MskTc.Location = new System.Drawing.Point(117, 156);
             this.MskTc.Margin = new System.Windows.Forms.Padding(2);
             this.MskTc.Name = "MskTc";
             this.MskTc.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -294,38 +297,96 @@ namespace TicariOtomasyon
             this.MskTc.Properties.Mask.EditMask = "99999999999";
             this.MskTc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.MskTc.Properties.MaxLength = 50;
-            this.MskTc.Size = new System.Drawing.Size(243, 26);
+            this.MskTc.Size = new System.Drawing.Size(268, 26);
             this.MskTc.TabIndex = 3;
             // 
-            // BtnTemizle
+            // MskTelefon2
             // 
-            this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTemizle.Appearance.Options.UseFont = true;
-            this.BtnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTemizle.ImageOptions.SvgImage")));
-            this.BtnTemizle.Location = new System.Drawing.Point(192, 565);
-            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnTemizle.Name = "BtnTemizle";
-            this.BtnTemizle.Size = new System.Drawing.Size(116, 35);
-            this.BtnTemizle.TabIndex = 14;
-            this.BtnTemizle.Text = "Temizle";
-            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
+            this.MskTelefon2.Location = new System.Drawing.Point(536, 38);
+            this.MskTelefon2.Margin = new System.Windows.Forms.Padding(2);
+            this.MskTelefon2.Name = "MskTelefon2";
+            this.MskTelefon2.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskTelefon2.Properties.Appearance.Options.UseFont = true;
+            this.MskTelefon2.Properties.Mask.EditMask = "(999) 000-0000";
+            this.MskTelefon2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.MskTelefon2.Properties.MaxLength = 50;
+            this.MskTelefon2.Size = new System.Drawing.Size(268, 26);
+            this.MskTelefon2.TabIndex = 5;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(80, 159);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(22, 20);
+            this.labelControl6.TabIndex = 66;
+            this.labelControl6.Text = "TC:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(57, 118);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(45, 20);
+            this.labelControl2.TabIndex = 60;
+            this.labelControl2.Text = "Soyad:";
+            // 
+            // MskTelefon1
+            // 
+            this.MskTelefon1.Location = new System.Drawing.Point(536, 76);
+            this.MskTelefon1.Margin = new System.Windows.Forms.Padding(2);
+            this.MskTelefon1.Name = "MskTelefon1";
+            this.MskTelefon1.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskTelefon1.Properties.Appearance.Options.UseFont = true;
+            this.MskTelefon1.Properties.Mask.EditMask = "(999) 000-0000";
+            this.MskTelefon1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.MskTelefon1.Properties.MaxLength = 50;
+            this.MskTelefon1.Size = new System.Drawing.Size(268, 26);
+            this.MskTelefon1.TabIndex = 4;
+            // 
+            // CmbIlce
+            // 
+            this.CmbIlce.Location = new System.Drawing.Point(536, 196);
+            this.CmbIlce.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbIlce.Name = "CmbIlce";
+            this.CmbIlce.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbIlce.Properties.Appearance.Options.UseFont = true;
+            this.CmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbIlce.Size = new System.Drawing.Size(268, 26);
+            this.CmbIlce.TabIndex = 9;
             // 
             // TxtVergidaire
             // 
-            this.TxtVergidaire.Location = new System.Drawing.Point(90, 305);
+            this.TxtVergidaire.Location = new System.Drawing.Point(536, 115);
             this.TxtVergidaire.Margin = new System.Windows.Forms.Padding(2);
             this.TxtVergidaire.Name = "TxtVergidaire";
             this.TxtVergidaire.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtVergidaire.Properties.Appearance.Options.UseFont = true;
             this.TxtVergidaire.Properties.MaxLength = 50;
-            this.TxtVergidaire.Size = new System.Drawing.Size(232, 26);
+            this.TxtVergidaire.Size = new System.Drawing.Size(268, 26);
             this.TxtVergidaire.TabIndex = 7;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(499, 159);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(15, 20);
+            this.labelControl8.TabIndex = 69;
+            this.labelControl8.Text = "İl:";
             // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(23, 308);
+            this.labelControl11.Location = new System.Drawing.Point(465, 118);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(51, 20);
@@ -336,111 +397,90 @@ namespace TicariOtomasyon
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(23, 388);
+            this.labelControl10.Location = new System.Drawing.Point(485, 199);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(31, 20);
             this.labelControl10.TabIndex = 70;
             this.labelControl10.Text = "İlçe:";
             // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(23, 348);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(2);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(15, 20);
-            this.labelControl8.TabIndex = 69;
-            this.labelControl8.Text = "İl:";
-            // 
-            // CmbIlce
-            // 
-            this.CmbIlce.Location = new System.Drawing.Point(58, 385);
-            this.CmbIlce.Margin = new System.Windows.Forms.Padding(2);
-            this.CmbIlce.Name = "CmbIlce";
-            this.CmbIlce.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CmbIlce.Properties.Appearance.Options.UseFont = true;
-            this.CmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbIlce.Size = new System.Drawing.Size(264, 26);
-            this.CmbIlce.TabIndex = 9;
-            // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(23, 269);
+            this.labelControl7.Location = new System.Drawing.Point(69, 199);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(33, 20);
             this.labelControl7.TabIndex = 67;
             this.labelControl7.Text = "Mail:";
             // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(23, 149);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(22, 20);
-            this.labelControl6.TabIndex = 66;
-            this.labelControl6.Text = "TC:";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(23, 229);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(62, 20);
-            this.labelControl5.TabIndex = 63;
-            this.labelControl5.Text = "Telefon2:";
-            // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(23, 189);
+            this.labelControl4.Location = new System.Drawing.Point(456, 79);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(60, 20);
             this.labelControl4.TabIndex = 62;
             this.labelControl4.Text = "Telefon1:";
             // 
-            // CmbIl
+            // labelControl5
             // 
-            this.CmbIl.Location = new System.Drawing.Point(52, 345);
-            this.CmbIl.Margin = new System.Windows.Forms.Padding(2);
-            this.CmbIl.Name = "CmbIl";
-            this.CmbIl.Properties.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CmbIl.Properties.Appearance.Options.UseFont = true;
-            this.CmbIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbIl.Size = new System.Drawing.Size(270, 26);
-            this.CmbIl.TabIndex = 8;
-            this.CmbIl.SelectedIndexChanged += new System.EventHandler(this.CmbIl_SelectedIndexChanged);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(454, 41);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(62, 20);
+            this.labelControl5.TabIndex = 63;
+            this.labelControl5.Text = "Telefon2:";
             // 
-            // labelControl2
+            // groupControl3
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 108);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(45, 20);
-            this.labelControl2.TabIndex = 60;
-            this.labelControl2.Text = "Soyad:";
+            this.groupControl3.Controls.Add(this.BtnKaydet);
+            this.groupControl3.Controls.Add(this.BtnSil);
+            this.groupControl3.Controls.Add(this.BtnGuncelle);
+            this.groupControl3.Controls.Add(this.BtnTemizle);
+            this.groupControl3.GroupStyle = DevExpress.Utils.GroupStyle.Light;
+            this.groupControl3.Location = new System.Drawing.Point(20, 16);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.ShowCaption = false;
+            this.groupControl3.Size = new System.Drawing.Size(1292, 46);
+            this.groupControl3.TabIndex = 72;
+            this.groupControl3.Text = " ";
+            // 
+            // BtnTemizle
+            // 
+            this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnTemizle.Appearance.Options.UseFont = true;
+            this.BtnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.ImageOptions.Image")));
+            this.BtnTemizle.Location = new System.Drawing.Point(138, 6);
+            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnTemizle.Name = "BtnTemizle";
+            this.BtnTemizle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnTemizle.Size = new System.Drawing.Size(37, 35);
+            this.BtnTemizle.TabIndex = 14;
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.gridControl1);
+            this.groupControl2.Controls.Add(this.groupControl1);
+            this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
+            this.groupControl2.Location = new System.Drawing.Point(12, 12);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.ShowCaption = false;
+            this.groupControl2.Size = new System.Drawing.Size(1359, 663);
+            this.groupControl2.TabIndex = 4;
             // 
             // FrmMusteriler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1426, 687);
-            this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.groupControl2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMusteriler";
             this.Text = "MÜŞTERİLER";
@@ -453,13 +493,19 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.Txtid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbIl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MskTc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MskTelefon2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MskTelefon1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MskTc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtVergidaire.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbIlce.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbIl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtVergidaire.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -495,5 +541,8 @@ namespace TicariOtomasyon
         private DevExpress.XtraEditors.TextEdit MskTc;
         private DevExpress.XtraEditors.TextEdit MskTelefon1;
         private DevExpress.XtraEditors.TextEdit MskTelefon2;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
     }
 }

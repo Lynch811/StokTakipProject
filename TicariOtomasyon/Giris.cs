@@ -21,6 +21,7 @@ namespace TicariOtomasyon
 
         private void Giris_Load(object sender, EventArgs e)
         {
+            
             this.Opacity = 90;
 
         }
@@ -110,15 +111,18 @@ namespace TicariOtomasyon
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            
             SqlCommand komut = new SqlCommand("SELECT * FROM TBL_ADMIN WHERE KULLANICIADI=@p1 AND SIFRE=@p2", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", TxtKadi.Text);
             komut.Parameters.AddWithValue("@p2", TxtSifre.Text);
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
-                FrmAnaSayfa fr = new FrmAnaSayfa();
+                AnaSayfa fr = new AnaSayfa();
+                fr.FormClosed += new FormClosedEventHandler(FrmAnaSayfa_FormClosed);
                 fr.Show();
                 this.Hide();
+
             }
             else
             {
@@ -127,8 +131,12 @@ namespace TicariOtomasyon
             }
             bgl.baglanti().Close();
         }
+        void FrmAnaSayfa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
 
-        private void TxtSifre_OnValueChanged(object sender, EventArgs e)
+            private void TxtSifre_OnValueChanged(object sender, EventArgs e)
         {
           
             //checkBox işaretli ise

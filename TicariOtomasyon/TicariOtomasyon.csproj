@@ -123,6 +123,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ayarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayarlar.Designer.cs">
+      <DependentUpon>Ayarlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="DboTicariOtomasyonDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -154,12 +166,6 @@
     </Compile>
     <Compile Include="FrmAnaSayfa.Designer.cs">
       <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAyarlar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAyarlar.Designer.cs">
-      <DependentUpon>FrmAyarlar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBankalar.cs">
       <SubType>Form</SubType>
@@ -202,6 +208,12 @@
     </Compile>
     <Compile Include="FrmHareketler.Designer.cs">
       <DependentUpon>FrmHareketler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKasa.Designer.cs">
+      <DependentUpon>FrmKasa.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMail.cs">
       <SubType>Form</SubType>
@@ -272,14 +284,17 @@
     <Compile Include="XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayarlar.resx">
+      <DependentUpon>Ayarlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAnaSayfa.resx">
       <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAyarlar.resx">
-      <DependentUpon>FrmAyarlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBankalar.resx">
       <DependentUpon>FrmBankalar.cs</DependentUpon>
@@ -301,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHareketler.resx">
       <DependentUpon>FrmHareketler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKasa.resx">
+      <DependentUpon>FrmKasa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMail.resx">
       <DependentUpon>FrmMail.cs</DependentUpon>

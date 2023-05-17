@@ -101,7 +101,7 @@ namespace TicariOtomasyon
             this.TxtKadi.LineMouseHoverColor = System.Drawing.Color.DimGray;
             this.TxtKadi.LineThickness = 4;
             this.TxtKadi.Location = new System.Drawing.Point(684, 190);
-            this.TxtKadi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TxtKadi.Margin = new System.Windows.Forms.Padding(5);
             this.TxtKadi.Name = "TxtKadi";
             this.TxtKadi.Size = new System.Drawing.Size(374, 58);
             this.TxtKadi.TabIndex = 1;
@@ -290,6 +290,7 @@ namespace TicariOtomasyon
             this.Controls.Add(this.TxtKadi);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris";
@@ -314,7 +315,6 @@ namespace TicariOtomasyon
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label LblGirisYap;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TxtSifre;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TxtKadi;
@@ -327,5 +327,6 @@ namespace TicariOtomasyon
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }
