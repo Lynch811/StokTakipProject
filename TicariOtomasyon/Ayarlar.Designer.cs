@@ -45,6 +45,8 @@ namespace TicariOtomasyon
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmb_yetki = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,6 +54,7 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb_yetki.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -124,7 +127,7 @@ namespace TicariOtomasyon
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(177, 48);
+            this.label3.Location = new System.Drawing.Point(177, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 34);
             this.label3.TabIndex = 28;
@@ -133,7 +136,7 @@ namespace TicariOtomasyon
             // TxtId
             // 
             this.TxtId.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtId.Location = new System.Drawing.Point(279, 45);
+            this.TxtId.Location = new System.Drawing.Point(279, 26);
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(345, 40);
             this.TxtId.TabIndex = 27;
@@ -141,7 +144,7 @@ namespace TicariOtomasyon
             // TxtKadi
             // 
             this.TxtKadi.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtKadi.Location = new System.Drawing.Point(279, 118);
+            this.TxtKadi.Location = new System.Drawing.Point(279, 86);
             this.TxtKadi.Name = "TxtKadi";
             this.TxtKadi.Size = new System.Drawing.Size(345, 40);
             this.TxtKadi.TabIndex = 26;
@@ -149,7 +152,7 @@ namespace TicariOtomasyon
             // TxtSifre
             // 
             this.TxtSifre.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtSifre.Location = new System.Drawing.Point(279, 187);
+            this.TxtSifre.Location = new System.Drawing.Point(279, 153);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(345, 40);
             this.TxtSifre.TabIndex = 25;
@@ -158,7 +161,7 @@ namespace TicariOtomasyon
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(147, 190);
+            this.label2.Location = new System.Drawing.Point(147, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 34);
             this.label2.TabIndex = 24;
@@ -168,7 +171,7 @@ namespace TicariOtomasyon
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(63, 121);
+            this.label1.Location = new System.Drawing.Point(63, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 34);
             this.label1.TabIndex = 23;
@@ -206,6 +209,8 @@ namespace TicariOtomasyon
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.cmb_yetki);
+            this.groupControl2.Controls.Add(this.label4);
             this.groupControl2.Controls.Add(this.TxtId);
             this.groupControl2.Controls.Add(this.label3);
             this.groupControl2.Controls.Add(this.pictureBox1);
@@ -219,6 +224,27 @@ namespace TicariOtomasyon
             this.groupControl2.Size = new System.Drawing.Size(1346, 283);
             this.groupControl2.TabIndex = 31;
             this.groupControl2.Text = " ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(147, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 34);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Yetki";
+            // 
+            // cmb_yetki
+            // 
+            this.cmb_yetki.Location = new System.Drawing.Point(279, 219);
+            this.cmb_yetki.Name = "cmb_yetki";
+            this.cmb_yetki.Properties.Appearance.Font = new System.Drawing.Font("Impact", 20.25F);
+            this.cmb_yetki.Properties.Appearance.Options.UseFont = true;
+            this.cmb_yetki.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmb_yetki.Size = new System.Drawing.Size(345, 40);
+            this.cmb_yetki.TabIndex = 32;
             // 
             // Ayarlar
             // 
@@ -239,6 +265,7 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb_yetki.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +287,7 @@ namespace TicariOtomasyon
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.ComboBoxEdit cmb_yetki;
+        private System.Windows.Forms.Label label4;
     }
 }

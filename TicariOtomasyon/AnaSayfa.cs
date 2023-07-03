@@ -16,9 +16,31 @@ namespace TicariOtomasyon
         {
             InitializeComponent();
         }
-
+        public string kullanicirolu;
+        public string kullanici;
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
+           
+            Giris grs = (Giris)Application.OpenForms["Giris"];
+            if (grs.intyetki == 0)
+            {
+            }
+            if (grs.intyetki == 1)
+            {
+                Btn_Ayar.Visible = false;
+            }
+            if (grs.intyetki == 2)
+            {
+                Btn_Ayar.Visible = false;
+                Btn_Kasa.Visible = false;
+                Btn_Banka.Visible = false;
+            }
+            if (frAnasayfamodul == null)
+            {
+                frAnasayfamodul = new FrmAnaSayfaModul();
+                frAnasayfamodul.MdiParent = this;
+                frAnasayfamodul.Show();
+            }
 
         }
         FrmUrunler frUrun;
@@ -87,6 +109,7 @@ namespace TicariOtomasyon
             if (frKasa == null)
             {
                 frKasa = new FrmKasa();
+                frKasa.ad = kullanici;
                 frKasa.MdiParent = this;
                 frKasa.Show();
             }
@@ -161,6 +184,15 @@ namespace TicariOtomasyon
                 frAyar.Show();
             }
         }
-
+        FrmAnaSayfaModul frAnasayfamodul;
+        private void Btn_AnaSayfa_Click(object sender, EventArgs e)
+        {
+            if (frAnasayfamodul == null)
+            {
+               frAnasayfamodul = new FrmAnaSayfaModul();
+               frAnasayfamodul.MdiParent = this;
+                frAnasayfamodul.Show();
+            }
+        }
     }
 }

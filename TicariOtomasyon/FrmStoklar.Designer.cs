@@ -29,10 +29,10 @@ namespace TicariOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView2 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView3 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView4 = new DevExpress.XtraCharts.PieSeriesView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
@@ -50,11 +50,11 @@ namespace TicariOtomasyon
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -84,6 +84,7 @@ namespace TicariOtomasyon
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // xtraTabControl1
             // 
@@ -107,11 +108,11 @@ namespace TicariOtomasyon
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(3, 3);
             this.chartControl1.Name = "chartControl1";
-            series1.LegendTextPattern = "{A}";
-            series1.Name = "Series 1";
-            series1.View = pieSeriesView1;
+            series3.LegendTextPattern = "{A}";
+            series3.Name = "Series 1";
+            series3.View = pieSeriesView3;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
+        series3};
             this.chartControl1.Size = new System.Drawing.Size(647, 291);
             this.chartControl1.TabIndex = 10;
             // 
@@ -120,11 +121,11 @@ namespace TicariOtomasyon
             this.chartControl2.Legend.Name = "Default Legend";
             this.chartControl2.Location = new System.Drawing.Point(3, 3);
             this.chartControl2.Name = "chartControl2";
-            series2.LegendTextPattern = "{A}";
-            series2.Name = "Series 1";
-            series2.View = pieSeriesView2;
+            series4.LegendTextPattern = "{A}";
+            series4.Name = "Series 1";
+            series4.View = pieSeriesView4;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
+        series4};
             this.chartControl2.Size = new System.Drawing.Size(585, 291);
             this.chartControl2.TabIndex = 11;
             // 
@@ -191,11 +192,11 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

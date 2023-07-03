@@ -177,6 +177,7 @@ namespace TicariOtomasyon
             this.Btn_AnaSayfa.Name = "Btn_AnaSayfa";
             this.Btn_AnaSayfa.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.Btn_AnaSayfa.Text = "Ana Sayfa";
+            this.Btn_AnaSayfa.Click += new System.EventHandler(this.Btn_AnaSayfa_Click);
             // 
             // accordionControl1
             // 

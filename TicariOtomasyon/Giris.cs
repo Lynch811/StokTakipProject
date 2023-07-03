@@ -13,6 +13,10 @@ namespace TicariOtomasyon
 {
     public partial class Giris : Form
     {
+        public string yetki;
+        public int intyetki;
+        public string Kullanici;
+
         SqlBaglanti bgl = new SqlBaglanti();
         public Giris()
         {
@@ -111,25 +115,52 @@ namespace TicariOtomasyon
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            
-            SqlCommand komut = new SqlCommand("SELECT * FROM TBL_ADMIN WHERE KULLANICIADI=@p1 AND SIFRE=@p2", bgl.baglanti());
-            komut.Parameters.AddWithValue("@p1", TxtKadi.Text);
-            komut.Parameters.AddWithValue("@p2", TxtSifre.Text);
-            SqlDataReader dr = komut.ExecuteReader();
-            if (dr.Read())
+            string user = TxtKadi.Text;
+            string pass = TxtSifre.Text;
+            SqlCommand cmd = new SqlCommand("SELECT KULLANICIADI,SIFRE,YETKI FROM TBL_ADMIN", bgl.baglanti());
+            SqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
             {
-                AnaSayfa fr = new AnaSayfa();
-                fr.FormClosed += new FormClosedEventHandler(FrmAnaSayfa_FormClosed);
-                fr.Show();
-                this.Hide();
+                Kullanici = (dr["KULLANICIADI"].ToString());
+                string Sifre = (dr["SIFRE"].ToString());
+                yetki = (dr["YETKI"].ToString());
+                if (user == Kullanici && pass == Sifre)
+                {
+                    intyetki = Int32.Parse(yetki);
+                    AnaSayfa fr = new AnaSayfa();
+                    fr.kullanici = TxtKadi.Text;
+                    fr.FormClosed += new FormClosedEventHandler(FrmAnaSayfa_FormClosed);
+                    fr.Show();
+                    this.Hide();
+                }
 
             }
-            else
-            {
-                MessageBox.Show("Hatalı kullanıcı adı veya şifre", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }
-            bgl.baglanti().Close();
+
+
+
+            //SqlCommand komut = new SqlCommand("SELECT * FROM TBL_ADMIN WHERE KULLANICIADI=@p1 AND SIFRE=@p2", bgl.baglanti());
+            //komut.Parameters.AddWithValue("@p1", TxtKadi.Text);
+            //komut.Parameters.AddWithValue("@p2", TxtSifre.Text);
+            //SqlDataReader dr = komut.ExecuteReader();
+            //if (dr.Read())
+            //{
+            //    AnaSayfa fr = new AnaSayfa();
+            //    fr.FormClosed += new FormClosedEventHandler(FrmAnaSayfa_FormClosed);
+            //    fr.Show();
+            //    this.Hide();
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Hatalı kullanıcı adı veya şifre", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //}
+            //bgl.baglanti().Close();
+
+
+
         }
         void FrmAnaSayfa_FormClosed(object sender, FormClosedEventArgs e)
         {

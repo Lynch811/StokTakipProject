@@ -30,12 +30,26 @@ namespace TicariOtomasyon
             TxtId.Text = "";
             TxtKadi.Text = "";
             TxtSifre.Text = "";
+            cmb_yetki.Text = "";
+        }
+        void Yetki()
+        {
+            SqlCommand komut = new SqlCommand("SELECT YETKIADI,YETKIDERECESI FROM TBL_YETKI", bgl.baglanti());
+            komut.CommandType = CommandType.Text;
+            SqlDataReader sdr = komut.ExecuteReader();
+            while (sdr.Read())
+            {
+                cmb_yetki.Properties.Items.Add(sdr["YETKIADI"]);
+            }
+            bgl.baglanti().Close();
+
         }
 
         private void Ayarlar_Load(object sender, EventArgs e)
         {
             AdminListesi();
             Temizle();
+            Yetki();
         }
 
         private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -52,14 +66,59 @@ namespace TicariOtomasyon
 
         private void BtnKaydet_Click_1(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("INSERT INTO TBL_ADMIN VALUES (@p1,@p2)", bgl.baglanti());
-            komut.Parameters.AddWithValue("@p1", TxtKadi.Text);
-            komut.Parameters.AddWithValue("@p2", TxtSifre.Text);
-            komut.ExecuteNonQuery();
+            try
+            {
+                string kullaniciadi = TxtKadi.Text;
+                string sifre = TxtSifre.Text;
+                string yetki = cmb_yetki.SelectedItem.ToString();
+                string yetkiadi = "";
+                string yetkiderecesi = "";
+
+                SqlCommand sc2 = new SqlCommand("SELECT YETKIADI,YETKIDERECESI FROM TBL_YETKI", bgl.baglanti());
+                SqlDataReader sdr = sc2.ExecuteReader();
+                List<YetkiTurleri> yetkiler = new List<YetkiTurleri>();
+                while (sdr.Read())
+                {
+                    yetkiadi = sdr["YETKIADI"].ToString();
+                    yetkiderecesi = sdr["YETKIDERECESI"].ToString();
+                    YetkiTurleri yt = new YetkiTurleri();
+                    yt.yetkiadi = yetkiadi;
+                    yt.yetkiderecesi = yetkiderecesi;
+                    yetkiler.Add(yt);
+
+                }
+                bgl.baglanti().Close();
+                if (yetkiler.Any(p=>p.yetkiadi== yetki))
+                {
+                    SqlCommand sc = new SqlCommand("INSERT INTO TBL_ADMIN(KULLANICIADI,SIFRE,YETKI) VALUES(@p1,@p2,@p3)", bgl.baglanti());
+                    sc.Parameters.AddWithValue("@p1", TxtKadi.Text);
+                    sc.Parameters.AddWithValue("@p2", TxtSifre.Text);
+                    sc.Parameters.AddWithValue("@p3", yetkiler.FirstOrDefault(p=>p.yetkiadi == yetki).yetkiderecesi);
+                    sc.ExecuteNonQuery();
+                    MessageBox.Show("Admin başarılı bir şekilde eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bgl.baglanti().Close();
+                    AdminListesi();
+                    Temizle();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Admin ekelenemedi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
             bgl.baglanti().Close();
-            MessageBox.Show("Admin başarılı bir şekilde eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            AdminListesi();
-            Temizle();
+
+
+
+
+            //SqlCommand komut = new SqlCommand("INSERT INTO TBL_ADMIN VALUES (@p1,@p2)", bgl.baglanti());
+            //komut.Parameters.AddWithValue("@p1", TxtKadi.Text);
+            //komut.Parameters.AddWithValue("@p2", TxtSifre.Text);
+            //komut.ExecuteNonQuery();
+            //bgl.baglanti().Close();
+            //MessageBox.Show("Admin başarılı bir şekilde eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //AdminListesi();
+            //Temizle();
         }
 
         private void BtnSil_Click_1(object sender, EventArgs e)
