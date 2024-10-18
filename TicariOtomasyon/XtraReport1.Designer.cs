@@ -217,7 +217,7 @@ namespace TicariOtomasyon
             this.Title.BorderColor = System.Drawing.Color.Black;
             this.Title.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Title.BorderWidth = 1F;
-            this.Title.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.Title.Font = new DevExpress.Drawing.DXFont("Arial", 14.25F);
             this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(70)))), ((int)(((byte)(62)))));
             this.Title.Name = "Title";
             // 
@@ -227,7 +227,7 @@ namespace TicariOtomasyon
             this.DetailCaption1.BorderColor = System.Drawing.Color.White;
             this.DetailCaption1.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.DetailCaption1.BorderWidth = 2F;
-            this.DetailCaption1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.DetailCaption1.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Bold);
             this.DetailCaption1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(70)))), ((int)(((byte)(62)))));
             this.DetailCaption1.Name = "DetailCaption1";
             this.DetailCaption1.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
@@ -238,7 +238,7 @@ namespace TicariOtomasyon
             this.DetailData1.BorderColor = System.Drawing.Color.Transparent;
             this.DetailData1.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.DetailData1.BorderWidth = 2F;
-            this.DetailData1.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.DetailData1.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F);
             this.DetailData1.ForeColor = System.Drawing.Color.Black;
             this.DetailData1.Name = "DetailData1";
             this.DetailData1.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
@@ -250,7 +250,7 @@ namespace TicariOtomasyon
             this.DetailData3_Odd.BorderColor = System.Drawing.Color.Transparent;
             this.DetailData3_Odd.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.DetailData3_Odd.BorderWidth = 1F;
-            this.DetailData3_Odd.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.DetailData3_Odd.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F);
             this.DetailData3_Odd.ForeColor = System.Drawing.Color.Black;
             this.DetailData3_Odd.Name = "DetailData3_Odd";
             this.DetailData3_Odd.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
@@ -258,7 +258,7 @@ namespace TicariOtomasyon
             // 
             // PageInfo
             // 
-            this.PageInfo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.PageInfo.Font = new DevExpress.Drawing.DXFont("Arial", 8.25F, DevExpress.Drawing.DXFontStyle.Bold);
             this.PageInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(70)))), ((int)(((byte)(62)))));
             this.PageInfo.Name = "PageInfo";
             this.PageInfo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -676,10 +676,10 @@ namespace TicariOtomasyon
             this.sqlDataSource1});
             this.DataMember = "TBL_FIRMALAR_1";
             this.DataSource = this.sqlDataSource1;
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.PageHeight = 1169;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.DetailCaption1,
