@@ -61,8 +61,8 @@ namespace TicariOtomasyon
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.MskHesapNo = new System.Windows.Forms.MaskedTextBox();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHesapTuru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbIlce.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbIl.Properties)).BeginInit();
@@ -72,15 +72,15 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.TxtSube.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtBankaAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txtid.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MskTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MskTarih.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MskTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LueFirma.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnTemizle
@@ -312,6 +312,7 @@ namespace TicariOtomasyon
             // 
             // Txtid
             // 
+            this.Txtid.Enabled = false;
             this.Txtid.Location = new System.Drawing.Point(119, 41);
             this.Txtid.Margin = new System.Windows.Forms.Padding(2);
             this.Txtid.Name = "Txtid";
@@ -434,20 +435,6 @@ namespace TicariOtomasyon
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "groupControl2";
             // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.BtnKaydet);
-            this.groupControl1.Controls.Add(this.BtnTemizle);
-            this.groupControl1.Controls.Add(this.BtnSil);
-            this.groupControl1.Controls.Add(this.BtnGuncelle);
-            this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(13, 17);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1304, 48);
-            this.groupControl1.TabIndex = 79;
-            this.groupControl1.Text = "groupControl1";
-            // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.MskHesapNo);
@@ -481,6 +468,20 @@ namespace TicariOtomasyon
             this.groupControl3.TabIndex = 80;
             this.groupControl3.Text = " ";
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.BtnKaydet);
+            this.groupControl1.Controls.Add(this.BtnTemizle);
+            this.groupControl1.Controls.Add(this.BtnSil);
+            this.groupControl1.Controls.Add(this.BtnGuncelle);
+            this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
+            this.groupControl1.Location = new System.Drawing.Point(13, 17);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.ShowCaption = false;
+            this.groupControl1.Size = new System.Drawing.Size(1304, 48);
+            this.groupControl1.TabIndex = 79;
+            this.groupControl1.Text = "groupControl1";
+            // 
             // FrmBankalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -505,11 +506,11 @@ namespace TicariOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.LueFirma.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

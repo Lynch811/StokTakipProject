@@ -269,7 +269,7 @@ namespace TicariOtomasyon
             this.ClientSize = new System.Drawing.Size(1904, 845);
             this.Controls.Add(this.groupControl5);
             this.Name = "FrmAnaSayfaModul";
-            this.Text = "FrmAnaSayfaModul";
+            this.Text = "ANA SAYFA";
             this.Load += new System.EventHandler(this.FrmAnaSayfaModul_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlStoklar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

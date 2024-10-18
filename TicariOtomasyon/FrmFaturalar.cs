@@ -53,7 +53,9 @@ namespace TicariOtomasyon
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            if (TxtFaturaID.Text == "")
+           
+
+            if (TxtFaturaID.Text == "" ) 
             {
                 //Fatura kaydetme 
                 SqlCommand komut = new SqlCommand("INSERT INTO TBL_FATURABILGI" +
@@ -75,7 +77,10 @@ namespace TicariOtomasyon
                 Temizle();
 
             }
-            if (TxtFaturaID.Text != "")
+
+            //-------------------------------------------  Firma carisi   ---------------------------------------------------------------------------------
+
+            if (TxtFaturaID.Text != "" && TxtCariTuru.Text == "Firma")
             {
                 double miktar, tutar, fiyat;
                 fiyat = Convert.ToDouble(TxtFiyat.Text);
@@ -88,12 +93,85 @@ namespace TicariOtomasyon
                     "(@p1,@p2,@p3,@p4,@p5)", bgl.baglanti());
                 komut2.Parameters.AddWithValue("@p1", TxtUrunAd.Text);
                 komut2.Parameters.AddWithValue("@p2", TxtMiktar.Text);
-                komut2.Parameters.AddWithValue("@p3", TxtFiyat.Text);
-                komut2.Parameters.AddWithValue("@p4", TxtTutar.Text);
+                komut2.Parameters.AddWithValue("@p3", decimal.Parse(TxtFiyat.Text));
+                komut2.Parameters.AddWithValue("@p4", decimal.Parse(TxtTutar.Text));
                 komut2.Parameters.AddWithValue("@p5", TxtFaturaID.Text);
                 komut2.ExecuteNonQuery();
                 bgl.baglanti().Close();
-                MessageBox.Show("Fatura ait ütün kaydı başarılı bir şekilde eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //hareket tablosuna veri girişi
+
+                SqlCommand komut3 = new SqlCommand("INSERT INTO TBL_FIRMAHAREKETLER" +
+                    "(URUNID,ADET,PERSONEL,FIRMA,FIYAT,TOPLAM,FATURAID,TARIH) VALUES" +
+                    "(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", bgl.baglanti());
+                komut3.Parameters.AddWithValue("@p1", TxtUrunID.Text);
+                komut3.Parameters.AddWithValue("@p2", TxtMiktar.Text);
+                komut3.Parameters.AddWithValue("@p3", TxtPersonel.Text);
+                komut3.Parameters.AddWithValue("@p4", TxtFirma.Text);
+                komut3.Parameters.AddWithValue("@p5", decimal.Parse(TxtFiyat.Text));
+                komut3.Parameters.AddWithValue("@p6", decimal.Parse(TxtTutar.Text));
+                komut3.Parameters.AddWithValue("@p7", TxtFaturaID.Text);
+                komut3.Parameters.AddWithValue("@p8", MskTarih.Text);
+                komut3.ExecuteNonQuery();
+                bgl.baglanti().Close();
+
+                //Stok sayısını azaltma
+                SqlCommand komut4 = new SqlCommand("UPDATE TBL_URUNLER SET ADET=ADET-@p1 WHERE ID=@p2", bgl.baglanti());
+                komut4.Parameters.AddWithValue("@p1", TxtMiktar.Text);
+                komut4.Parameters.AddWithValue("@p2", TxtUrunID.Text);
+                komut4.ExecuteNonQuery();
+                bgl.baglanti().Close();
+
+                MessageBox.Show("Fatura ait ürün kaydı başarılı bir şekilde eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FaturaListesi();
+                Temizle();
+            }
+
+            //-------------------------------------------  Müşteri carisi   --------------------------------------------------------------------------------- 
+
+            if (TxtFaturaID.Text != "" && TxtCariTuru.Text == "Müşteri")
+            {
+                double miktar, tutar, fiyat;
+                fiyat = Convert.ToDouble(TxtFiyat.Text);
+                miktar = Convert.ToDouble(TxtMiktar.Text);
+                tutar = miktar * fiyat;
+                TxtTutar.Text = tutar.ToString();
+
+                SqlCommand komut2 = new SqlCommand("INSERT INTO TBL_FATURADETAY" +
+                    "(URUNAD,MIKTAR,FIYAT,TUTAR,FATURAID) VALUES" +
+                    "(@p1,@p2,@p3,@p4,@p5)", bgl.baglanti());
+                komut2.Parameters.AddWithValue("@p1", TxtUrunAd.Text);
+                komut2.Parameters.AddWithValue("@p2", TxtMiktar.Text);
+                komut2.Parameters.AddWithValue("@p3", decimal.Parse(TxtFiyat.Text));
+                komut2.Parameters.AddWithValue("@p4", decimal.Parse(TxtTutar.Text));
+                komut2.Parameters.AddWithValue("@p5", TxtFaturaID.Text);
+                komut2.ExecuteNonQuery();
+                bgl.baglanti().Close();
+
+                //hareket tablosuna veri girişi
+
+                SqlCommand komut3 = new SqlCommand("INSERT INTO TBL_MUSTERIHAREKET" +
+                    "(URUNID,ADET,PERSONEL,MUSTERI,FIYAT,TOPLAM,FATURAID,TARIH) VALUES" +
+                    "(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", bgl.baglanti());
+                komut3.Parameters.AddWithValue("@p1", TxtUrunID.Text);
+                komut3.Parameters.AddWithValue("@p2", TxtMiktar.Text);
+                komut3.Parameters.AddWithValue("@p3", TxtPersonel.Text);
+                komut3.Parameters.AddWithValue("@p4", TxtFirma.Text);
+                komut3.Parameters.AddWithValue("@p5", decimal.Parse(TxtFiyat.Text));
+                komut3.Parameters.AddWithValue("@p6", decimal.Parse(TxtTutar.Text));
+                komut3.Parameters.AddWithValue("@p7", TxtFaturaID.Text);
+                komut3.Parameters.AddWithValue("@p8", MskTarih.Text);
+                komut3.ExecuteNonQuery();
+                bgl.baglanti().Close();
+
+                //Stok sayısını azaltma
+                SqlCommand komut4 = new SqlCommand("UPDATE TBL_URUNLER SET ADET=ADET-@p1 WHERE ID=@p2", bgl.baglanti());
+                komut4.Parameters.AddWithValue("@p1", TxtMiktar.Text);
+                komut4.Parameters.AddWithValue("@p2", TxtUrunID.Text);
+                komut4.ExecuteNonQuery();
+                bgl.baglanti().Close();
+
+                MessageBox.Show("Fatura ait ürün kaydı başarılı bir şekilde eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FaturaListesi();
                 Temizle();
             }
@@ -176,5 +254,20 @@ namespace TicariOtomasyon
             }
             fr.Show();
         }
+
+        private void BtnBul_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("SELECT URUNAD,SATISFIYAT FROM TBL_URUNLER WHERE ID=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", TxtUrunID.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                TxtUrunAd.Text = dr[0].ToString();
+                TxtFiyat.Text = dr[1].ToString();
+            }
+            bgl.baglanti().Close();
+        }
+
+     
     }
 }

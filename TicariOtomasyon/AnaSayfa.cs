@@ -46,7 +46,7 @@ namespace TicariOtomasyon
         FrmUrunler frUrun;
         private void Btn_Urunler_Click_1(object sender, EventArgs e)
         {
-            if (frUrun == null)
+            if (frUrun == null || frUrun.IsDisposed)
             {
                 frUrun = new FrmUrunler();
                 frUrun.MdiParent = this;
@@ -56,7 +56,7 @@ namespace TicariOtomasyon
         FrmStoklar frStok;
         private void Btn_Stoklar_Click_1(object sender, EventArgs e)
         {
-            if (frStok == null)
+            if (frStok == null || frStok.IsDisposed)
             {
                 frStok = new FrmStoklar();
                 frStok.MdiParent = this;
@@ -66,7 +66,7 @@ namespace TicariOtomasyon
         FrmMusteriler frMusteri;
         private void Btn_Musteriler_Click(object sender, EventArgs e)
         {
-            if (frMusteri == null)
+            if (frMusteri == null || frMusteri.IsDisposed)
             {
                 frMusteri = new FrmMusteriler();
                 frMusteri.MdiParent = this;
@@ -76,7 +76,7 @@ namespace TicariOtomasyon
         FrmFirmalar frFirma;
         private void Btn_Firmalar_Click_1(object sender, EventArgs e)
         {
-            if (frFirma == null)
+            if (frFirma == null || frFirma.IsDisposed)
             {
                 frFirma = new FrmFirmalar();
                 frFirma.MdiParent = this;
@@ -86,7 +86,7 @@ namespace TicariOtomasyon
         FrmPersonel frPersonel;
         private void Btn_Personel_Click(object sender, EventArgs e)
         {
-            if (frPersonel == null)
+            if (frPersonel == null || frPersonel.IsDisposed)
             {
                 frPersonel = new FrmPersonel();
                 frPersonel.MdiParent = this;
@@ -96,7 +96,7 @@ namespace TicariOtomasyon
         FrmGiderler frGiderler;
         private void Btn_Giderler_Click(object sender, EventArgs e)
         {
-            if (frGiderler == null)
+            if (frGiderler == null || frGiderler.IsDisposed)
             {
                 frGiderler = new FrmGiderler();
                 frGiderler.MdiParent = this;
@@ -106,7 +106,7 @@ namespace TicariOtomasyon
         FrmKasa frKasa;
         private void Btn_Kasa_Click(object sender, EventArgs e)
         {
-            if (frKasa == null)
+            if (frKasa == null || frKasa.IsDisposed)
             {
                 frKasa = new FrmKasa();
                 frKasa.ad = kullanici;
@@ -117,7 +117,7 @@ namespace TicariOtomasyon
         FrmNotlar frNotlar;
         private void Btn_Notlar_Click(object sender, EventArgs e)
         {
-            if (frNotlar == null)
+            if (frNotlar == null || frNotlar.IsDisposed)
             {
                 frNotlar = new FrmNotlar();
                 frNotlar.MdiParent = this;
@@ -127,7 +127,7 @@ namespace TicariOtomasyon
         FrmBankalar frBankalar;
         private void Btn_Banka_Click(object sender, EventArgs e)
         {
-            if (frBankalar == null)
+            if (frBankalar == null || frBankalar.IsDisposed)
             {
                 frBankalar = new FrmBankalar();
                 frBankalar.MdiParent = this;
@@ -137,7 +137,7 @@ namespace TicariOtomasyon
         FrmRehber frRehber;
         private void Btn_Rehber_Click(object sender, EventArgs e)
         {
-            if (frRehber == null)
+            if (frRehber == null || frRehber.IsDisposed)
             {
                 frRehber = new FrmRehber();
                 frRehber.MdiParent = this;
@@ -147,7 +147,7 @@ namespace TicariOtomasyon
         FrmFaturalar frFaturalar;
         private void Btn_Fatura_Click(object sender, EventArgs e)
         {
-            if (frFaturalar == null)
+            if (frFaturalar == null || frFaturalar.IsDisposed)
             {
                 frFaturalar = new FrmFaturalar();
                 frFaturalar.MdiParent = this;
@@ -157,7 +157,7 @@ namespace TicariOtomasyon
         FrmHareketler frHareket;
         private void Btn_Hareket_Click(object sender, EventArgs e)
         {
-            if (frHareket == null)
+            if (frHareket == null || frHareket.IsDisposed)
             {
                 frHareket = new FrmHareketler();
                 frHareket.MdiParent = this;
@@ -167,7 +167,7 @@ namespace TicariOtomasyon
         FrmRaporlar frRapor;
         private void Btn_Rapor_Click(object sender, EventArgs e)
         {
-            if (frRapor == null)
+            if (frRapor == null || frRapor.IsDisposed)
             {
                 frRapor = new FrmRaporlar();
                 frRapor.MdiParent = this;
@@ -177,7 +177,7 @@ namespace TicariOtomasyon
         Ayarlar frAyar;
         private void Btn_Ayar_Click(object sender, EventArgs e)
         {
-            if (frAyar == null)
+            if (frAyar == null || frAyar.IsDisposed)
             {
                 frAyar = new Ayarlar();
                 frAyar.MdiParent = this;
@@ -187,7 +187,7 @@ namespace TicariOtomasyon
         FrmAnaSayfaModul frAnasayfamodul;
         private void Btn_AnaSayfa_Click(object sender, EventArgs e)
         {
-            if (frAnasayfamodul == null)
+            if (frAnasayfamodul == null || frAnasayfamodul.IsDisposed)
             {
                frAnasayfamodul = new FrmAnaSayfaModul();
                frAnasayfamodul.MdiParent = this;
